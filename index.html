@@ -6,79 +6,18 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{Title}{block:PermalinkPage}{block:PostSummary} — {PostSummary}{/block:PostSummary}{/block:PermalinkPage}</title>
+    <meta property="og:title" content="{title}">
 
-    <!--
-      ==========================================================
-      THEME NAME : Wicked
-           CURRENT VERSION : 2.0.2
-           PUBLISHED DATE : 2016-04-05
-           UPDATED DATE : 2016-05-09
-           AUTHOR : Themecloset
-           THEME URL : http://themecloset.me/themes/Themecloset/Wicked
-
-      This content contains material protected under International and Federal Copyright Laws and Treaties. Any unauthorized reprint or use of this material is prohibited. No part of this content may be reproduced or transmitted in any form or by any means, electronic or mechanical, including photocopying, recording, or by any information storage and retrieval system without express written permission from the author / publisher. 
-
-      ==========================================================
-
-      DO NOT ALTER BODY.CSS
-
-      ==========================================================
-
-      @2013-2014 THEMECLOSET / ALL RIGHTS RESERVED
-      CHECK README FILE TO LEARN MORE
-      FEEDBACK IS WELCOME / @ DYDWN600@NAVER.COM
-
-      jQuery Colorbox v1.4.14 - 2013-04-16
-      (c) 2013 Jack Moore - jacklmoore.com/colorbox
-      license: http://www.opensource.org/licenses/mit-license.php
-
-      Infinite Scroll
-      + https://github.com/paulirish/infinite-scroll
-      + version 2.0b2.120519
-      + Copyright 2011/12 Paul Irish & Luke Shumard
-      + Licensed under the MIT license
-      + Documentation: http://infinite-scroll.com/
-
-      jQuery Masonry v2.0.110825 & Imagesloaded.js
-      * A dynamic layout plugin for jQuery
-      * The flip-side of CSS Floats
-      * http://masonry.desandro.com
-      * Licensed under the MIT license.
-      * Copyright 2011 David DeSandro
-
-      Font Credit : http://fontastic.me / Google fonts
-      * Font Awesome / MIT License
-      + Entypo / Creative License 3.0
-      + Steadsets / Free for personal and commercial projects
-      + Linetons / Free
-      * 80shades / Free
-      * Justverctor Free Icons / Free
-      + Open sans & Lato by goolge fonts / Free license
-
-      Browser Selectr.js
-      * License :http://creativecommons.org/licenses/by/2.5/
-      * Original Author: Rafael Lima: http://rafael.adm.br
-      * Based on idea by 37signals
-      * http://37signals.com/svn/archives2/browser_selectors_in_css.php
-
-      Html shiv.js
-      * Dual licensed under the MIT or GPL Version 2 licenses
-      * https://code.google.com/p/html5shiv/
-
-      Css reset
-      * http://meyerweb.com/eric/tools/css/reset/ 
-      * v2.0 | 20110126
-      * License: none (public domain)
-      ==========================================================
-    -->
-    
-    <meta property=”og:title” content=”{title}”>
     {block:Description}
-    <meta name="description" content="{MetaDescription}" />
+      <meta name="description" content="{MetaDescription}" />
     {/block:Description}
-    {block:PermalinkPage}{block:PostSummary} 
-    <meta name="description" content="{PostSummary}" />
-    {/block:PostSummary}{/block:PermalinkPage}
+
+    {block:PermalinkPage}
+      {block:PostSummary} 
+        <meta name="description" content="{PostSummary}" />
+      {/block:PostSummary}
+    {/block:PermalinkPage}
+
     <meta name="viewport" id="viewport" content="user-scalable=0;initial-scale=1.0, maximum-scale=1.0">
     <link rel="shortcut icon" href="{Favicon}" />
     <link rel="alternate" type="application/rss+xml" href="{RSS}">
@@ -102,20 +41,16 @@
 
     <meta name="image:Logo" content=""/>
     <meta name="image:Background" content=""/>
-
-    <meta name='text:Disqus Shortname' content=''>
+    <meta name="text:Disqus Shortname" content="">
 
     <meta name="if:Use Black and white Photo" content="" />
-
     <meta name="text:Google analytics Web Property ID" content="">
     <meta name="if:Use Caption" content="" />
-
     <meta name="if:Use Bigger Posts" content="" />
     <meta name="if:Use Pagination" content="" />
     <meta name="if:Gallery Mode" content="1" />
     <meta name="if:Hide Tags" content="" />
     <meta name="if:Hide Caption" content="" />
-    <meta name="if:Place Copyright Notice" content="" />
     <meta name="if:Use Highres Images" content="" />
 
     <meta name="select:Post Padding" content="25px" title="25px">
@@ -131,42 +66,6 @@
     <meta name="color:Post Content Color" content="#cccccc" />  
     <meta name="color:Ask Post Content Color" content="#626262" />
     <meta name="color:Description Color" content="#aeaeae" />  
-
-    <meta name="select:Header Top Padding" content="190px" title="190px">
-    <meta name="select:Header Top Padding" content="110px" title="110px">
-    <meta name="select:Header Top Padding" content="120px" title="120px">
-    <meta name="select:Header Top Padding" content="130px" title="130px">
-    <meta name="select:Header Top Padding" content="140px" title="140px">
-    <meta name="select:Header Top Padding" content="160px" title="160px">
-    <meta name="select:Header Top Padding" content="170px" title="170px">
-    <meta name="select:Header Top Padding" content="180px" title="180px">
-    <meta name="select:Header Top Padding" content="200px" title="200px">
-    <meta name="select:Header Top Padding" content="210px" title="210px">
-    <meta name="select:Header Top Padding" content="220px" title="220px">
-    <meta name="select:Header Top Padding" content="230px" title="230px">
-    <meta name="select:Header Top Padding" content="240px" title="240px">    
-
-    <meta name="select:Header Bottom Padding" content="60px" title="60px">
-    <meta name="select:Header Bottom Padding" content="70px" title="70px">
-    <meta name="select:Header Bottom Padding" content="80px" title="80px">
-    <meta name="select:Header Bottom Padding" content="90px" title="90px">
-    <meta name="select:Header Bottom Padding" content="110px" title="110px">
-    <meta name="select:Header Bottom Padding" content="120px" title="120px">
-    <meta name="select:Header Bottom Padding" content="130px" title="130px">
-    <meta name="select:Header Bottom Padding" content="140px" title="140px">
-    <meta name="select:Header Bottom Padding" content="160px" title="160px">
-    <meta name="select:Header Bottom Padding" content="170px" title="170px">
-    <meta name="select:Header Bottom Padding" content="180px" title="180px">
-    <meta name="select:Header Bottom Padding" content="190px" title="190px">
-    <meta name="select:Header Bottom Padding" content="200px" title="200px">
-    <meta name="select:Header Bottom Padding" content="210px" title="210px">
-    <meta name="select:Header Bottom Padding" content="220px" title="220px">
-    <meta name="select:Header Bottom Padding" content="230px" title="230px">
-    <meta name="select:Header Bottom Padding" content="240px" title="240px">
-    <meta name="select:Header Bottom Padding" content="250px" title="250px">
-    <meta name="select:Header Bottom Padding" content="260px" title="260px">
-    <meta name="select:Header Bottom Padding" content="270px" title="270px">
-    <meta name="select:Header Bottom Padding" content="280px" title="280px">
 
     <meta name="select:Title Size" content="55pt" title="55pt">
     <meta name="select:Title Size" content="10pt" title="10pt">
@@ -184,30 +83,10 @@
     <meta name="select:Title Size" content="105pt" title="105pt">
     <meta name="select:Title Size" content="115pt" title="115pt">
 
-    <meta name="text:Custom link 1 URL" content="" />
-    <meta name="text:Custom link 1 title" content="" />
-
-    <meta name="text:Custom link 2 URL" content="" />
-    <meta name="text:Custom link 2 title" content="" />
-
-    <meta name="text:Custom link 3 URL" content="" />
-    <meta name="text:Custom link 3 title" content="" />
-    <meta name="text:Custom link 4 URL" content="" />
-
-    <meta name="text:Custom link 4 title" content="" />
-
-
-    <meta name="text:Personal Site URL" content="" />
-    <meta name="text:Facebook URL" content="" />
-    <meta name="text:Twitter URL" content="" />
-    <meta name="text:Pinterest URL" content="" />
-    <meta name="text:Instagram Username" content="" />
-    <meta name="text:Shop URL" content="" />
-    <meta name="text:SoundCloud URL" content="" />
-    <meta name="text:Vimeo URL" content="" />
-    <meta name="text:Youtube URL" content="" />
-    <meta name="text:Email Address" content="" />
-    <meta name="text:Copyright Part" content="" />  
+    <meta name="text:Portfolio" content="" />
+    <meta name="text:Twitter" content="" />
+    <meta name="text:Instagram" content="" />
+    <meta name="text:Vimeo" content="" />
 
     <!--[if IE 7]>
       <style>body { display:none; }</style>
@@ -253,7 +132,7 @@
     <script src="http://static.tumblr.com/0ppiv8o/nF8o3sfb4/masonry.js"></script>
     <script src="http://static.tumblr.com/16wo1wg/FG6nqh7ga/jquery.infinitescroll.min.js"></script>
 
-    <link href='http://static.tumblr.com/0ppiv8o/Ndco3sh0x/structure.css' rel='stylesheet' type='text/css'>
+    <link href="http://static.tumblr.com/0ppiv8o/Ndco3sh0x/structure.css" rel="stylesheet" type="text/css">
     <script src="http://static.tumblr.com/rbkljgb/L4go3shd0/colorbox.js"></script>
     <script src="http://static.tumblr.com/rbkljgb/CPDo3sk70/cfix.js"></script>
     <script src="http://static.tumblr.com/cvhjz4y/Ts5n5rpic/loaded.js"></script>
@@ -264,7 +143,7 @@
 
     <!-- Options & Colors -->    
     <script src="http://static.tumblr.com/pnazptg/pSVo92zys/promotional.js"></script>
-    <link href='http://static.tumblr.com/pnazptg/Hjao92zzd/promotional.css' rel='stylesheet' type='text/css'>
+    <link href="http://static.tumblr.com/pnazptg/Hjao92zzd/promotional.css" rel="stylesheet" type="text/css">
     
     <style>
       .copyrightcontainer,
@@ -343,7 +222,7 @@
         background-color: {BackgroundColor};
       
         {block:ifnotbackgroundimage} background-color: {BackgroundColor}; {/block:ifnotbackgroundimage}
-        {block:ifbackgroundimage} background-image: url('{image:background}'); {/block:ifbackgroundimage}
+        {block:ifbackgroundimage} background-image: url({image:background}); {/block:ifbackgroundimage}
       }
 
       {block:ifusecaption} .video_inner iframe { margin-bottom: -5px; } {/block:ifusecaption}
@@ -358,7 +237,7 @@
           margin-left: 50px;
           margin-top: -43px;
           position: relative;
-          font-family: 'open sans', sans-serif;
+          font-family: "open sans", sans-serif;
           font-size: 9pt;
           line-height: 13pt !important;
 
@@ -402,7 +281,7 @@
           margin-left: 50px;
           margin-top: -43px;
           position: relative;
-          font-family: 'open sans', sans-serif;
+          font-family: "open sans", sans-serif;
           width:60%;
         }
 
@@ -693,7 +572,7 @@
 
       .hedor {
         padding-top: {select:Header Top Padding};
-        padding-bottom: {select:Header Bottom Padding};
+        padding-bottom: 140px;
         margin-bottom: -60px;
       }
 
@@ -742,7 +621,7 @@
         margin-top: 30px;
         line-height: 16pt;
         font-size: 9pt;
-        font-family: 'open sans', sans-serif;
+        font-family: "open sans", sans-serif;
         letter-spacing: 0pt;
       }
 
@@ -857,40 +736,8 @@
 
       <div class="menu-part">
         {block:AskEnabled}
-          <a class='iframe' id="ask_form" href="http://www.tumblr.com/ask_form/{name}.tumblr.com">{AskLabel}</a>
+          <a class="iframe" id="ask_form" href="http://www.tumblr.com/ask_form/{name}.tumblr.com">{AskLabel}</a>
         {/block:AskEnabled}
-
-        {block:ifCustomlink1title}
-          <span>
-            <a href="{text:Custom link 1 URL}">
-              {text:Custom link 1 title}
-            </a>
-          </span>
-        {/block:ifCustomlink1title}
-
-        {block:ifCustomlink2title}
-          <span>
-            <a href="{text:Custom link 2 URL}">
-              {text:Custom link 2 title}
-            </a>
-          </span>
-        {/block:ifCustomlink2title}
-
-        {block:ifCustomlink3title}
-          <span>
-            <a href="{text:Custom link 3 URL}">
-              {text:Custom link 3 title}
-            </a>
-          </span>
-        {/block:ifCustomlink3title}
-
-        {block:ifCustomlink4title}
-          <span>
-            <a href="{text:Custom link 4 URL}">
-              {text:Custom link 4 title}
-            </a>
-          </span>
-        {/block:ifCustomlink4title}
 
         {block:HasPages}
           {block:Pages}
@@ -902,53 +749,21 @@
           <span><a href="/submit">{SubmitLabel}</a></span>
         {/block:SubmissionsEnabled}
         
-        {block:ifpersonalsiteurl}
-          <span class="s-icon"><a href="{text:personal site url}">Website</a></span>
-        {/block:ifpersonalsiteurl}
+        {block:ifportfolio}
+          <span class="s-icon"><a href="{text:Portfolio}">portfolio</a></span>
+        {/block:ifportfolio}
 
-        {block:iffacebookurl}
-          <span class="s-icon"><a href="{text:facebook url}">Facebook</a></span>
-        {/block:iffacebookurl}
+        {block:ifinstagram}
+          <span class="s-icon"><a href="http://instagram.com/{text:Instagram}">instagram</a></span>
+        {/block:ifinstagram}
 
-        {block:iftwitterurl}
-          <span class="s-icon"><a href="{text:twitter url}">Twitter</a></span>
-        {/block:iftwitterurl}
+        {block:iftwitter}
+          <span class="s-icon"><a href="https://twitter.com/{text:Twitter}">twitter</a></span>
+        {/block:iftwitter}
 
-        {block:ifpinteresturl}
-          <span class="s-icon"><a href="{text:pinterest url}">Pinterest</a></span>
-        {/block:ifpinteresturl}
-
-        {block:ifinstagramUsername}
-          <span class="s-icon"><a href="http://instagram.com/{text:instagram Username}">Instagram</a></span>
-        {/block:ifinstagramUsername}
-
-        {block:ifshopurl}
-          <span class="s-icon"><a href="{text:shop url}">Store</a></span>
-        {/block:ifshopurl}
-
-        {block:ifsoundcloudurl}
-          <span class="s-icon"><a href="{text:soundcloud url}">SoundCloud</a></span>
-        {/block:ifsoundcloudurl}
-     
-        {block:ifgoogleplusurl}
-          <span class="s-icon"><a href="{text:google plus url}">Google Plus</a></span>
-        {/block:ifgoogleplusurl}
-           
-        {block:ifvimeourl}
-          <span class="s-icon"><a href="{text:vimeo url}">Vimeo</a></span>
-        {/block:ifvimeourl}
-           
-        {block:ifyoutubeurl}
-          <span class="s-icon"><a href="{text:youtube url}">YouTube</a></span>
-        {/block:ifyoutubeurl}
-           
-        {block:ifYelpurl}
-           <span class="s-icon"><a href="{text:Yelp url}">Yelp</a></span>
-        {/block:ifYelpurl}
-           
-        {block:ifEmailAddress}
-           <span class="s-icon"><a href="mailto:{text:Email Address}">Contact us</a></span>
-        {/block:ifEmailAddress}
+        {block:ifvimeo}
+          <span class="s-icon"><a href="https://vimeo.com/{text:Vimeo}">vimeo</a></span>
+        {/block:ifvimeo}
       </div>
 
       <div class="descrip-part">{description}</div>
@@ -991,7 +806,7 @@
                   <div class="question">
                     <div style="width: 30px; height: 30px; position: relative;" class="questions">
                       <div class="hide-it-end">
-                        <div class="aks_container" style="background-image: url('{AskerPortraitURL-24}');"></div>
+                        <div class="aks_container" style="background-image: url({AskerPortraitURL-24});"></div>
                         <div class="askker">
                           {Asker}
                           <div class="rotat"></div>
@@ -1029,7 +844,7 @@
               {block:Photo}
                 <li>
                   <a href="{block:ifUseHighresImages}{PhotoURL-Highres}{/block:ifUseHighresImages}{block:ifnotUseHighresImages}{PhotoURL-500}{/block:ifnotUseHighresImages}" data-featherlight="image"> 
-                    <div style="background-image: url('{block:ifUseHighresImages}{PhotoURL-Highres}{/block:ifUseHighresImages}{block:ifnotUseHighresImages}{PhotoURL-500}{/block:ifnotUseHighresImages}'); background-size: 100% 100%;" class="imagebuilder">
+                    <div style="background-image: url({block:ifUseHighresImages}{PhotoURL-Highres}{/block:ifUseHighresImages}{block:ifnotUseHighresImages}{PhotoURL-500}{/block:ifnotUseHighresImages}); background-size: 100% 100%;" class="imagebuilder">
                       <img src="{PhotoURL-100}" class="small">
 
                       {block:indexpage}
@@ -1718,11 +1533,5 @@
         {/block:Pagination}
       </div>
     {/block:ifusepagination}
-
-    {block:ifplacecopyrightnotice}
-      <div class="copyrightcontainer">
-        <div class="copyrightcontent">{block:ifCopyrightPart}{text:Copyright Part}{/block:ifCopyrightPart}{block:ifnotCopyrightPart}Copyright © {CopyrightYears} {title}{/block:ifnotCopyrightPart}</div>
-      </div>
-    {/block:ifplacecopyrightnotice}
   </body>
 </html>
