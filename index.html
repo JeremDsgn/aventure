@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html {block:ifuseblackandwhitephoto}blackandwhite="on"{/block:ifuseblackandwhitephoto} data-theme-name="Wicked" id="{block:indexpage}ind{/block:indexpage}{block:permalinkpage}per{/block:permalinkpage}" class="pageenabled{block:posts}{block:date}prevent{/block:date}{/block:posts}">
+<html>
   <head>
     <meta charset="utf-8">
     <meta name="description" content="">
@@ -38,1473 +38,308 @@
     <meta name="msapplication-TileImage" content="{Favicon}">
     <meta name="theme-color" content="#ffffff">
 
-    <meta name="image:Logo" content="" />
-    <meta name="image:Background" content="" />
-    <meta name="text:Disqus Shortname" content="">
-
-    <meta name="if:Use Black and white Photo" content="" />
-    <meta name="text:Google analytics Web Property ID" content="">
-    <meta name="if:Use Caption" content="" />
-    <meta name="if:Use Bigger Posts" content="" />
-    <meta name="if:Use Pagination" content="" />
-    <meta name="if:Gallery Mode" content="1" />
-    <meta name="if:Hide Tags" content="" />
-    <meta name="if:Hide Caption" content="" />
-    <meta name="if:Use Highres Images" content="" />
-
-    <meta name="select:Post Padding" content="25px" title="25px">
-    <meta name="select:Post Padding" content="0px" title="0px">
-    <meta name="select:Post Padding" content="5px" title="5px">
-    <meta name="select:Post Padding" content="15px" title="15px">
-    <meta name="select:Post Padding" content="35px" title="35px">
-    <meta name="select:Post Padding" content="45px" title="45px">
-
-    <meta name="color:Menus Color" content="#aeaeae" />
-    <meta name="color:Link Color" content="#9c9c9c" />
-    <meta name="color:Post Background Color" content="#ffffff" />
-    <meta name="color:Post Content Color" content="#cccccc" />
-    <meta name="color:Ask Post Content Color" content="#626262" />
-    <meta name="color:Description Color" content="#aeaeae" />
-
-    <meta name="select:Title Size" content="55pt" title="55pt">
-    <meta name="select:Title Size" content="10pt" title="10pt">
-    <meta name="select:Title Size" content="15pt" title="15pt">
-    <meta name="select:Title Size" content="20pt" title="20pt">
-    <meta name="select:Title Size" content="25pt" title="25pt">
-    <meta name="select:Title Size" content="30pt" title="30pt">
-    <meta name="select:Title Size" content="35pt" title="35pt">
-    <meta name="select:Title Size" content="45pt" title="45pt">
-    <meta name="select:Title Size" content="65pt" title="65pt">
-    <meta name="select:Title Size" content="75pt" title="75pt">
-
-    <meta name="select:Title Size" content="85pt" title="85pt">
-    <meta name="select:Title Size" content="95pt" title="95pt">
-    <meta name="select:Title Size" content="105pt" title="105pt">
-    <meta name="select:Title Size" content="115pt" title="115pt">
-
-    <meta name="text:Portfolio" content="" />
-    <meta name="text:Twitter" content="" />
-    <meta name="text:Instagram" content="" />
-    <meta name="text:Vimeo" content="" />
+    <!-- SCRIPTS -->
+    <script src="http://static.tumblr.com/cvhjz4y/JWSn5a9bq/jquery.min.js"></script>
+    <script src="https://static.tumblr.com/0ppiv8o/nF8o3sfb4/masonry.js"></script>
+    <script src="http://static.tumblr.com/16wo1wg/FG6nqh7ga/jquery.infinitescroll.min.js"></script>
+    <script src="http://static.tumblr.com/cvhjz4y/Ts5n5rpic/loaded.js"></script>
 
     <!-- HTML5 Shiv -->
     <!--[if lt IE 9]>
       <script src="http://static.tumblr.com/hriofhd/Qj0m8pn7q/html5shiv.js"></script>
     <![endif]-->
 
-    <!-- Google Analytics -->
-    {block:IfGoogleAnalyticsWebPropertyID}
-      <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', '{text:Google Analytics ID}', 'tumblr.com');
-        ga('send', 'pageview');
-      </script>
-    {/block:IfGoogleAnalyticsWebPropertyID}
-
-    <link href="http://static.tumblr.com/rbkljgb/Hoco7f1i2/bwa.css" rel="stylesheet" type="text/css">
-    <link href="http://static.tumblr.com/0ppiv8o/Ndco3sh0x/structure.css" rel="stylesheet" type="text/css">
-
-    <script src="http://static.tumblr.com/cvhjz4y/JWSn5a9bq/jquery.min.js"></script>
-    <script src="http://static.tumblr.com/rbkljgb/CZgo7grzq/layingout.js"></script>
-    <script src="http://static.tumblr.com/0ppiv8o/nF8o3sfb4/masonry.js"></script>
-    <script src="http://static.tumblr.com/16wo1wg/FG6nqh7ga/jquery.infinitescroll.min.js"></script>
-    <script src="http://static.tumblr.com/rbkljgb/L4go3shd0/colorbox.js"></script>
-    <script src="http://static.tumblr.com/rbkljgb/CPDo3sk70/cfix.js"></script>
-    <script src="http://static.tumblr.com/cvhjz4y/Ts5n5rpic/loaded.js"></script>
-    <script src="http://static.tumblr.com/rbkljgb/JZRnqynih/featherlight.min.js"></script>
-    <script src="http://static.tumblr.com/rbkljgb/xoQnr8msu/pagefix.js"></script>
-    <script src="http://static.tumblr.com/rbkljgb/bhSo7grzx/install-theme.js"></script>
-
     <style>
-      .copyrightcontainer,
-      .pagination {
-        display: none;
+      /*
+      * RESET
+      */
+      html, body, div, span, applet, object, iframe,
+      h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+      a, abbr, acronym, address, big, cite, code,
+      del, dfn, em, img, ins, kbd, q, s, samp,
+      small, strike, strong, sub, sup, tt, var,
+      b, u, i, center,
+      dl, dt, dd, ol, ul, li,
+      fieldset, form, label, legend,
+      table, caption, tbody, tfoot, thead, tr, th, td,
+      article, aside, canvas, details, embed,
+      figure, figcaption, footer, header, hgroup,
+      menu, nav, output, ruby, section, summary,
+      time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+      }
+      /* HTML5 display-role reset for older browsers */
+      article, aside, details, figcaption, figure,
+      footer, header, hgroup, menu, nav, section {
+        display: block;
+      }
+      body {
+        line-height: 1;
+      }
+      ol, ul {
+        list-style: none;
+      }
+      blockquote, q {
+        quotes: none;
+      }
+      blockquote:before, blockquote:after,
+      q:before, q:after {
+        content: '';
+        content: none;
+      }
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
       }
 
-      {block:indexpage}
-        .video2 iframe {
-          width: 100% !important;
-          min-width: 100% !important;
-          max-width: 100% !important;
-        }
-      {/block:indexpage}
-
-      #infscr-loading { display: none !important; }
-
-      ::selection { background: {AccentColor}; }
-      ::-moz-selection { background: {AccentColor}; }
-
-      .inner_container{
-        background-color: {color:Post Background Color};
-        {block:permalinkpage}
-        background-color: {color:Post Background Color};
-        {/block:permalinkpage}
+      img {
+        vertical-align: bottom;
+        max-width: 100%;
       }
 
-      .scrollup { cursor: pointer; }
-
-      .reblog_button {
-        position: relative;
-        right: -4px !important;
-      }
-
-      .like_button {
-        height: 14px;
-        width: 14px;
-      }
-
-      h3.title a,
-      .link-post .link-name a,
-      .quote-post .source,
-      .quote-post .source a,
-      .question,
-      .question a,
-      .source.quoty {
-        color: {AccentColor} !important;
-        font-family: 'open sans', sans-serif;
-        margin-bottom: 20px;
-        line-height: 15pt;
-        font-weight: 600;
-        font-size: 12pt !important;
-      }
-
-      .post { color: {color:Post Content Color} !important; }
-
-      {block:indexpage}
-        .post{ margin: {select:Post Padding} !important; }
-      {/block:indexpage}
-
-      .inner_container {
-        margin-bottom: -3px;
-        {block:permalinkpage}padding: 10px;{/block:permalinkpage}
-      }
-
-      .simwha { line-height: 13pt; }
+      /*
+      * CONTAINER
+      */
 
       body {
         font-family: arial, sans-serif;
-        font-weight: 300;
-        font-size: 10pt;
-        line-height: 22pt;
-        letter-spacing: 0.6pt;
-        word-spacing: 0pt;
-        font-family:arial;
-        background-color: {BackgroundColor};
-
-        {block:ifnotbackgroundimage} background-color: {BackgroundColor}; {/block:ifnotbackgroundimage}
-        {block:ifbackgroundimage} background-image: url({image:background}); {/block:ifbackgroundimage}
+        -moz-osx-font-smoothing: grayscale;
+        font-smoothing: antialiased;
+        text-rendering: optimizelegibility;
       }
 
-      {block:ifusecaption} .video_inner iframe { margin-bottom: -5px; } {/block:ifusecaption}
-
-      {block:indexpage}
-        .real-qeustion {
-          width: 81%;
-          border: 1px solid #efefef;
-          padding: 17px;
-          background-color: #f5f4f4;
-          border-radius: 2px;
-          margin-left: 50px;
-          margin-top: -43px;
-          position: relative;
-          font-family: "open sans", sans-serif;
-          font-size: 9pt;
-          line-height: 13pt !important;
-
-          {block:ifnotusebiggerposts} width: 60%; {/block:ifnotusebiggerposts};
-          {block:ifnotgallerymode} width: 81%; {/block:ifnotgallerymode};
-        }
-
-        .real-answer {
-          width: 75%;
-          border: 1px solid #efefef;
-          padding:17px;
-          background-color: #f5f4f4;
-          display: inline-block;
-          border-radius: 2px;
-          position: relative;
-          margin-top: 0px;
-          position: relative;
-          line-height:12pt !important;
-
-          {block:ifnotusebiggerposts}
-            width: 60%;
-            margin-right: 210px;
-          {/block:ifnotusebiggerposts}
-
-          {block:ifnotgallerymode} width: 81%; {/block:ifnotgallerymode}
-        }
-      {/block:indexpage}
-
-      {block:permalinkpage}
-        .post {
-          width: 520px;
-          margin: 0px !important;
-        }
-
-        .real-qeustion {
-          width: 81%;
-          border: 1px solid #efefef;
-          padding: 17px;
-          background-color: #f5f4f4;
-          border-radius: 2px;
-          margin-left: 50px;
-          margin-top: -43px;
-          position: relative;
-          font-family: "open sans", sans-serif;
-          width:60%;
-        }
-
-        .real-answer {
-          width: 78%;
-          border: 1px solid #efefef;
-          padding: 17px;
-          background-color: #f5f4f4;
-          display: inline-block;
-          border-radius: 2px;
-          position: relative;
-          margin-top: 0px;
-          position:relative;
-        }
-      {/block:permalinkpage}
-
-      .scrollup {
-        color: #aeaeae;
-        background-color: {color:Sup Menu Background color};
+      .container {
+        padding-left: 30px;
+        padding-right: 30px;
       }
 
-      {block:ifnotusebiggerposts} .answer img.answers { right: -3px !important; } {/block:ifnotusebiggerposts}
-      .post-padding2, .post-padding2 a { color: #aeaeae !important; }
-
-      a {
-        color: {color:link color};
-        text-decoration: none;
-        -webkit-transition: all 0.2s ease-in-out;
-        -moz-transition: all 0.2s ease-in-out;
-        -o-transition: all 0.2s ease-in-out;
-        transition: all 0.2s ease-in-out;
-      }
-
-      a:hover {
-        color: {AccentColor};
-        -webkit-transition: all 0.2s ease-in-out;
-        -moz-transition: all 0.2s ease-in-out;
-        -o-transition: all 0.2s ease-in-out;
-        transition: all 0.2s ease-in-out;
-      }
-
-      .post a {
-        {block:ifuselinkborder} text-decoration: underline; {/block:ifuselinkborder}
-      }
-
-      .menus a {
-        color: {color:Menus Color};
-        font-family: open sans;
-        font-weight: 600;
-        margin-left: 5px;
-        margin-right: 5px;
-        text-transform: initial;
-      }
-
-      .link .link-name { margin-top: 10px; }
-      .real-question { color: {color:post content color}; }
-
-      #content{ margin-top: 70px; }
-
-      {block:ifplacesubmenubottom} .scrollup{ bottom:90px; } {/block:ifplacesubmenubottom}
-
-      .pagination { display: none; }
-      .post-disqus { display:none; }
-      blockquote { border-left-color: {AccentColor} !important; }
-      .backstretch img:first-child { z-index: 9998 !important; }
-      .backstretch img:nth-child(2) { z-index: 9999 !important; }
-      .backstretch img:nth-child(3) { z-index: 10000 !important; }
-      .backstretch img { min-width: 100%;}
-      {block:ifresizeheader} .header{ height:50% !important; } {/block:ifresizeheader}
-
-      {block:ifusecaption}
-        {block:indexpage}
-          {block:ifusepostborder}
-            {block:ifnotusebiggerposts} .note-count { margin-bottom: -14px; } {/block:ifnotusebiggerposts}
-          {/block:ifusepostborder}
-
-          {block:ifnotusepostborder}
-            {block:ifnotusebiggerposts} .note-count { margin-bottom: -14px; } {/block:ifnotusebiggerposts}
-          {/block:ifnotusepostborder}
-
-          .note-count { margin-bottom: -15px; }
-        {/block:indexpage}
-      {/block:ifusecaption}
-
-      {block:permalinkpage} .note-count { margin-bottom: -15px; } {/block:permalinkpage}
-
-      .chat-post .inner_container,
-      .link-post .inner_container,
-      .quote-post .inner_container {
-        padding-bottom: 25px;
-      }
-
-      .quote {
-        line-height: 19pt;
-        margin-bottom: 12px;
-      }
-
-      .pagination {
-        text-align: center;
-        padding-top: 50px;
-        padding-bottom: 40px;
-      }
-
-      a.tags_URL { color: {color:link color}; }
-
-      .Answer .answer,
-      .real-qeustion {
-        color: {color:Ask Post Content Color};
-      }
-
-      .askker { color:{AccentColor}; }
-
-      {CustomCSS}
-
-      .hover-container {
-        width: 100%;
-        height: 98%;
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        opacity: 0.5;
-        padding-top: 0px;
-        background: {AccentColor};
-        padding-top:2px;
-      }
-
-      .pagination a {
-        color: {AccentColor};
-        border: 3px solid {color:Pagination Next and Pev Color};
-        padding: 15px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        font-weight: 600;
-        font-family: arial;
-      }
-
-      .copyrightcontainer {
-        background-color: {color:Sup Menu Background color};
-        width: 100%;
-        letter-spacing: 0pt;
-        color: {color:Post Content Color}
-      }
-
-      .audio_embed iframe,
-      .photoset iframe {
-        margin-bottom: 0px;
-      }
-
-      {block:permalinkpage} .inner_container { background-color: {color:post background color}; } {/block:permalinkpage}
-
-
-      img.linkthumb {
-        margin-left: -25px;
-        margin-top: -20px;
-
-        {block:indexpage}
-          {block:ifgallerymode}
-            width: 500px;
-            {block:ifnotusebiggerposts} width: 250px; {/block:ifnotusebiggerposts};
-          {/block:ifgallerymode}
-
-          {block:ifnotgallerymode}
-            width: 610px;
-            {block:ifnotusebiggerposts} width: 500px; {/block:ifnotusebiggerposts};
-          {/block:ifnotgallerymode}
-        {/block:indexpage}
-
-        {block:permalinkpage}
-          width: 500px;
-          margin-left: -15px;
-          margin-top: -10px;
-        {/block:permalinkpage}
-      }
-
-      .copyrightcontainer {
-        background-color: {color:Post Background Color};
-        margin-top: 140px;
-      }
-
-      {block:ifhidecaption}
-        .note-count-no-caption {
-          margin-top: -30px !important;
-          padding-left: 10px;
-          padding-right: 10px;
-          position: relative;
-          top: -8px;
-        }
-      {/block:ifhidecaption}
-
-      .note-count-no-caption {
-        margin-top: -30px !important;
-        padding-left: 10px;
-        padding-right: 10px;
-        position: relative;
-        top: -8px;
-      }
-
-      .note-count-no-caption-no-like {
-        padding-left: 10px;
-        padding-right: 10px;
-        position: relative;
-        top: 6px;
-      }
-
-      {block:permalinkpage}
-        #container {
-          max-width: 1230px !important;
-          margin: auto;
-        }
-        .post { margin:10px !important; }
-      {/block:permalinkpage}
-
-      {block:ifcaptionpartrounded}
-        .post {
-          border-bottom-left-radius: 6px;
-          border-bottom-right-radius: 6px;
-          overflow: hidden;
-        }
-      {block:ifcaptionpartrounded}
-
-      .datevariable span {
-        background-color: {AccentColor};
-        color: #ffffff;
-        font-weight: 600;
-        font-family: lato;
-        padding: 15px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        margin: 8px;
-        letter-spacing: 1pt;
-        display: inline-block;
-        font-size: 9pt;
-      }
-
-      .datevariable a { color: #ffffff; }
-
-      .datevariable span:hover {
-        opacity: 0.7;
-        -webkit-transition: all 0.2s ease-in-out;
-        -moz-transition: all 0.2s ease-in-out;
-        -o-transition: all 0.2s ease-in-out;
-        transition: all 0.2s ease-in-out;
-      }
-
-      .datevariable span {
-        opacity: 1;
-        -webkit-transition: all 0.2s ease-in-out;
-        -moz-transition: all 0.2s ease-in-out;
-        -o-transition: all 0.2s ease-in-out;
-        transition: all 0.2s ease-in-out;
-      }
-
-      .datavariable { text-align: center; }
-
-      .note-count,
-      .note-count-no-caption-no-like {
-        font-family: lato !important;
-        letter-spacing: 1pt;
-        font-size: 8pt;
-      }
-
-      .freezing {
-        margin-right: 7px;
-        font-size: 8pt;
-        position: relative;
-        top: -1px;
-      }
-
-      .fix-it-tag { margin-top: -13px !important; }
-
-      .note-count {
-        padding-bottom: 0px !important;
-
-        {block:ifnotusebiggerposts} padding: 0px !important; {/block:ifnotusebiggerposts}
-        {block:ifnotusecaption}
-          {block:indexpage}
-            margin-bottom: -20px !important;
-            position: relative;
-            top: -10px !important;
-          {/block:indexpage}
-        {/block:ifnotusecaption}
-      }
-
-      .shareit {
-        text-align: right;
-        margin-top: -27px;
-      }
-
+      /*
+      * HEADER
+      */
       .header {
         padding-top: 200px;
-        padding-bottom: 40px;
+        padding-bottom: 140px;
+        text-align: center;
       }
 
-      .header { text-align: center; }
-
-      .header .title-part {
-        font-family: {TitleFont};
-        font-size: {select:title size};
-        color: {TitleColor};
-        line-height: {select:Title Size};
-        font-weight: {TitleFontWeight};
+      .header .menu {
+        margin-top: 40px;
       }
 
-      .header .title-part a { color:{TitleColor}; }
-
-      .header .menu-part {
-        font-family: arial, sans-serif;
-        padding: 5px;
-        padding-left: 10px;
-        padding-right: 10px;
+      .header .menu li {
         display: inline-block;
-        letter-spacing: 0pt;
-
-        {block:ifUseMenuBorder}
-          border-top: 1px solid {color:Menus Border Color};
-          border-bottom: 1px solid {color:Menus Border Color};
-        {/block:ifUseMenuBorder}
       }
 
-      .header .menu-part a {
+      .header .menu li a {
+        position: relative;
+        font-size: 12px;
         margin-left: 6px;
         margin-right: 6px;
-        color:{color:menus color};
+        color: #CCCCCC;
+        text-decoration: none;
+        transition: color 400ms ease;
       }
 
-      .header .menu-part a {
-        height: 30px;
-        padding-top: 30px;
+      .header .menu li a::before {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: #CCCCCC;
+        transition: width 400ms ease;
+      }
+
+      .header .menu li:hover a {
+        color: #58AEE1;
+      }
+
+      .header .menu li:hover a::before {
+        width: 100%;
+        background-color: #58AEE1;
+      }
+
+      /*
+      * PHOTOS
+      */
+      .content {
+        opacity: 0;
+        transition: opacity 400ms ease;
+      }
+
+      .content .list {
+        margin: 0 auto;
+      }
+
+      .content .list .post a {
+        display: block;
+      }
+
+      .content .list .post {
+        position: relative;
+        max-width: 400px;
+        margin: 30px;
+        cursor: pointer;
+        transition: 300ms all ease;
+      }
+
+      .content .list .post:hover .details {
+        opacity: 1;
+      }
+
+      .content .list .post .details {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(82, 158, 204, .65);
+        opacity: 0;
+        transition: 400ms opacity ease;
+      }
+
+      .content .list .post .details .buttons {
+        position: relative;
         display: inline-block;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
 
-      .descrip-part {
-        color: {color:description color};
-        width: 580px;
-        margin: auto;
-        margin-top: 30px;
-        line-height: 16pt;
-        font-size: 9pt;
-        font-family: "open sans", sans-serif;
-        letter-spacing: 0pt;
+      /*
+      * MISCELLANEOUS
+      */
+      #infscr-loading {
+        display: none !important;
       }
 
-      .text_based {
-        position: relative;
-        top: -7px;
+      /*
+      * PAGINATION
+      */
+      .pagination {
+        display: none !important;
+        text-align: center;
       }
 
-      .text .text_based,
-      .Answer .text_based {
-        position: relative;
-        top: -10px;
-        padding-top: 10px !important;
-      }
-
-      .note-count-no-caption,
-      .note-count-no-caption-no-like {
-        padding-left: 0px !important;
-        padding-right:0px !important;
-      }
-
-      .caption_inner i { font-style: oblique; }
-      .caption_inner h2 { font-size: 12pt !important; }
-      .caption_inner b { font-weight: 600; }
-
-      .caption_inner ul li {
-        margin-left: 25px;
-        margin-top: 4px;
-        margin-bottom: 4px;
-        list-style-type: disc;
-      }
-
-      .caption_inner ol li {
-        margin-left: 30px;
-        margin-top: 4px;
-        margin-bottom: 4px;
-        list-style-type: decimal;
-      }
-
-      .simwha { display: none; }
-      .simwha{ opacity: 0; }
-
-      .pagination,
-      .copyrightcontainer {
-        display: block !important;
-      }
-
-      .pagination { margin-top: 70px !important; }
-      .simwha divabc { border: 0px; }
-
-      #ind .post {
-        max-width: initial !important;
-        {block:ifnotgallerymode} width: 700px; {/block:ifnotgallerymode}
-
-        {block:ifgallerymode}
-          {block:ifnotusebiggerposts} width: 250px; {/block:ifnotusebiggerposts}
-          {block:ifusebiggerposts} width: 400px; {/block:ifusebiggerposts}
-        {/block:ifgallerymode}
-      }
-
-      {block:ifnotgallerymode}
-        #container {
-          max-width: 700px;
-          margin: auto;
-          position: relative;
-          left: -30px;
-        }
-      {/block:ifnotgallerymode}
-
-      .eclipse-color,
-      .eclipse-color a {
-        color: #aeaeae;
-      }
-
-      #tumblr_controls { z-index: 2147483647; }
-
-      .tmblr-iframe {
-        width: 550px !important;
-        max-width: 500px;
-      }
-
-      .cboxElement { height: initial !important; }
-
-      .scrollup { z-index: 2147483647; }
-
-      #cboxOverlay,
-      #colorbox {
-        z-index: 2147483647;
-      }
-
-      #cboxWrapper,
-      #colorbox,
-      #cboxLoadedContent {
-        height: 280px !important;
-        margin-top: -20px;
+      .pagination li a {
+        font-size: 12px;
+        margin-left: 6px;
+        margin-right: 6px;
+        color: #CCCCCC;
+        text-decoration: none;
+        transition: color 400ms ease;
       }
     </style>
   </head>
 
   <body>
-    <div class="header">
-      <div class="title-part">
-        <a href="/">
-          {block:ifnotlogoimage}
-            {title}
-          {/block:ifnotlogoimage}
+    <div class="container">
+      <div class="header">
+        <h1><img src="https://secure.static.tumblr.com/553540ddd4ce6b9009c248468b1fc440/nczltly/EJeod02y4/tumblr_static_drt9c0x5l7480ws8oc0kso8ss.png" alt=""></h1>
 
-          {block:iflogoimage}
-            <img src="{image:logo}">
-          {/block:iflogoimage}
-        </a>
+        <ul class="menu">
+          <li><a href="https://www.jerembarbet.com/">portfolio</a></li>
+          <li><a href="http://instagram.com/JeremDsgn">instagram</a></li>
+          <li><a href="https://twitter.com/JeremDsgn">twitter</a></li>
+          <li><a href="https://vimeo.com/JeremDsgn">vimeo</a></li>
+        </ul>
       </div>
 
-      <div class="menu-part">
-        {block:AskEnabled}
-          <a class="iframe" id="ask_form" href="http://www.tumblr.com/ask_form/{name}.tumblr.com">{AskLabel}</a>
-        {/block:AskEnabled}
+      <div class="content">
+        <ul class="list">
+          {block:Posts}
+            {block:Photo}
+              <li class="post">
+                <a href="{PhotoURL-Highres}">
+                  <img src="{PhotoURL-500}">
 
-        {block:HasPages}
-          {block:Pages}
-            <span><a href="{URL}">{Label}</a></span>
-          {/block:Pages}
-        {/block:HasPages}
+                  <div class="details">
+                    <div class="buttons">
+                      <divabc>
+                        <div class="positioning">{LikeButton color="white" size="11"}</div>
+                      </divabc>
 
-        {block:SubmissionsEnabled}
-          <span><a href="/submit">{SubmitLabel}</a></span>
-        {/block:SubmissionsEnabled}
+                      <divabc onclick="window.open('{ReblogURL}');">
+                        {ReblogButton color="white" size="11"}
+                      </divabc>
 
-        {block:ifportfolio}
-          <span class="s-icon"><a href="{text:Portfolio}">portfolio</a></span>
-        {/block:ifportfolio}
-
-        {block:ifinstagram}
-          <span class="s-icon"><a href="http://instagram.com/{text:Instagram}">instagram</a></span>
-        {/block:ifinstagram}
-
-        {block:iftwitter}
-          <span class="s-icon"><a href="https://twitter.com/{text:Twitter}">twitter</a></span>
-        {/block:iftwitter}
-
-        {block:ifvimeo}
-          <span class="s-icon"><a href="https://vimeo.com/{text:Vimeo}">vimeo</a></span>
-        {/block:ifvimeo}
-      </div>
-
-      <div class="descrip-part">{description}</div>
-    </div>
-
-    <div class="scrollup"></div>
-
-    <div id="container" class="{block:ifnotusebiggerposts}not-bigger{block:ifnotusebiggerposts}">
-      <div id="content">
-        {block:Posts}
-          <div class="post infscr {block:chat}chat-post{/block:chat} {block:quote}quote-post{/block:quote} {block:text}text-post{/block:text} {block:photoset}caption-post{/block:photoset} {block:audio}caption-post{/block:audio} {block:photo}caption-post{/block:photo} {block:video}caption-post{/block:video} {block:link}link-post{/block:link} {block:Answer}text-post{/block:Answer}" id="{postID}">
-            <div class="inner_container" {block:ifnotusepostborder} {block:indexpage} {block:ifnotusecaption} style="{block:video} background-color: {BackgroundColor} !important;{/block:video} {block:audio} background-color: {BackgroundColor} !important;{/block:audio} {block:photo} background-color: {BackgroundColor} !important; {/block:photo} {block:photoset} background-color: {BackgroundColor} !important; {/block:photoset}" {/block:ifnotusecaption}{/block:indexpage}{/block:ifnotusepostborder}>
-
-              <!-- Text block -->
-              {block:Text}
-                <li class="text">
-                  {block:Title}
-                    <h3 class="title"><a href="{Permalink}"  target="_blank">{Title}</a></h3>
-                  {/block:Title}
-
-                  <div class="text-body">{Body}</div>
-
-                  {block:date}
-                    <div class="note-count text_based">
-                      <a href="{permalink}" target="_blank">{block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} {lang:Notes} {/block:NoteCount}{/block:ifusebiggerposts}{block:ifnotusebiggerposts}{notecount} {lang:Notes} {block:ifnotusebiggerposts}</a>
-
-                      <div class="shareit">
-                        <span>{likebutton size="14"}</span>
-                        <span>{Reblogbutton size="14"}</span>
-                      </div>
-                    </div>
-                  {/block:date}
-
-                </li>
-              {/block:Text}
-
-              <!-- Anwser block -->
-              {block:Answer}
-                <div class="Answer">
-                  <div class="question">
-                    <div style="width: 30px; height: 30px; position: relative;" class="questions">
-                      <div class="hide-it-end">
-                        <div class="aks_container" style="background-image: url({AskerPortraitURL-24});"></div>
-                        <div class="askker">
-                          {Asker}
-                          <div class="rotat"></div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="real-qeustion">
-                      {question}
-                      <div class="radius"></div>
+                      <divabc onclick="window.open('{Permalink}');">
+                        {permalinkbutton color="white" size="11"}
+                      </divabc>
                     </div>
                   </div>
-
-                  <div class="answer">
-                    <img src="{favicon}" class="answers">
-                    <div class="real-answer">
-                      {Answer}
-                      <div class="radius2"></div>
-                    </div>
-                  </div>
-
-                  {block:date}
-                    <div class="note-count text_based">
-                      <a href="{permalink}" target="_blank">{block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} {lang:Notes} {/block:NoteCount}{/block:ifusebiggerposts}{block:ifnotusebiggerposts}{notecount} {lang:Notes} {block:ifnotusebiggerposts}</a>
-                      <div class="shareit">
-                        <span>{likebutton size="14"}</span>
-                        <span>{Reblogbutton size="14"}</span>
-                      </div>
-                    </div>
-                  {/block:date}
-                </div>
-              {/block:Answer}
-
-              <!-- Photo block -->
-              {block:Photo}
-                <li>
-                  <a href="{block:ifUseHighresImages}{PhotoURL-Highres}{/block:ifUseHighresImages}{block:ifnotUseHighresImages}{PhotoURL-500}{/block:ifnotUseHighresImages}" data-featherlight="image">
-                    <div style="background-image: url({block:ifUseHighresImages}{PhotoURL-Highres}{/block:ifUseHighresImages}{block:ifnotUseHighresImages}{PhotoURL-500}{/block:ifnotUseHighresImages}); background-size: 100% 100%;" class="imagebuilder">
-                      <img src="{PhotoURL-100}" class="small">
-
-                      {block:indexpage}
-                        {block:ifnotusecaption}
-                          <div class="simwha">
-                            <a href="{PhotoURL-Highres}" data-featherlight="image">
-                              <div class="hover-container" style="display: inline-block;"></div>
-                            </a>
-
-                            <div class="hover-container2">
-                              <div class="zzas">
-                                <div>
-                                  <divabc>
-                                    <div class="positioning">{likebutton color="white" size="11"}</div>
-                                  </divabc>
-
-                                  <divabc onclick="window.open('{ReblogURL}');" style="cursor:pointer">
-                                    <div style="margin-top: -1px;">
-                                      <span data-icon="A"></span>
-                                    </div>
-                                  </divabc>
-
-                                  <divabc style="cursor:pointer" onclick="window.open('{Permalink}');">
-                                    <div class="positioning" data-icon="c"></div>
-                                  </divabc>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        {/block:ifnotusecaption}
-                      {/block:indexpage}
-                    </div>
-                  </a>
-
-                  {block:indexpage}
-                    {block:ifusecaption}
-                      {block:ifgallerymode}
-                        <div class="caption">
-                          <div class="caption_inner">
-                            {block:ifnothidecaption}
-                              {Caption}
-                            {/block:ifnothidecaption}
-
-                            {block:ifnothidetags}
-                              {block:HasTags}
-                                <div class="fix-it-tag"><br>{block:tags}<a href="{TagURL}" class="tags_URL"># <span class="freezing">{tag}</span></a> {/block:tags}</div>
-                              {/block:HasTags}
-                            {/block:ifnothidetags}
-
-                            <div class="note-count-no-caption-no-like">
-                              <a href="{permalink}" target="_blank">{block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} {lang:Notes} {/block:NoteCount}{/block:ifusebiggerposts}{block:ifnotusebiggerposts}{notecount} {lang:Notes} {block:ifnotusebiggerposts}</a>
-
-                              <div class="shareit">
-                                <span>{likebutton size="14"}</span>
-                                <span>{Reblogbutton size="14"}</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      {/block:ifgallerymode}
-
-                      {block:ifnotgallerymode}
-                        <div class="caption">
-                          <div class="caption_inner">
-                            {block:ifnothidecaption}
-                              {Caption}
-                            {/block:ifnothidecaption}
-
-                            {block:ifnothidetags}
-                              {block:HasTags}
-                                <div class="fix-it-tag"><br>{block:tags}<a href="{TagURL}" class="tags_URL"># <span class="freezing">{tag}</span></a> {/block:tags}</div>
-                              {/block:HasTags}
-                            {/block:ifnothidetags}
-
-                            <div class="note-count {block:caption}note-count-no-caption{/block:caption}">
-                              <a href="{permalink}" target="_blank">{block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} {lang:Notes} {/block:NoteCount}{/block:ifusebiggerposts}{block:ifnotusebiggerposts}{notecount} {lang:Notes} {block:ifnotusebiggerposts}</a>
-
-                              <div  class="shareit">
-                                <span>{likebutton size="14"}</span>
-                                <span>{Reblogbutton size="14"}</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      {block:ifnotgallerymode}
-                    {/block:ifusecaption}
-                  {/block:indexpage}
-
-                  {block:permalinkpage}
-                    <div class="caption">
-                      <div class="caption_inner">
-                        {Caption}
-
-                        {block:ifnothidetags}
-                          {block:HasTags}
-                            <div class="fix-it-tag"><br>{block:tags}<a href="{TagURL}" class="tags_URL"># <span class="freezing">{tag}</span></a> {/block:tags}</div>
-                          {/block:HasTags}
-                        {/block:ifnothidetags}
-
-                        <div class="note-count">
-                          <a href="{permalink}" target="_blank">{block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} {lang:Notes} {/block:NoteCount}{/block:ifusebiggerposts}{block:ifnotusebiggerposts}{notecount} {lang:Notes} {block:ifnotusebiggerposts}</a>
-
-                          <div class="shareit">
-                            <span>{likebutton size="14"}</span>
-                            <span>{Reblogbutton size="14"}</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  {/block:permalinkpage}
-                </li>
-              {/block:Photo}
-
-              <!-- Panorama block -->
-              {block:Panorama}
-                <li>
-                  {LinkOpenTag}
-                    <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}" />
-                  {LinkCloseTag}
-
-                  <div class="caption">
-                    <div class="caption_inner">
-                      {block:ifnothidecaption}
-                        {block:ifnothidecaption}
-                          {Caption}
-                        {/block:ifnothidecaption}
-                      {/block:ifnothidecaption}
-                    </div>
-                  </div>
-                </li>
-              {/block:Panorama}
-
-              <!-- Photoset block -->
-              {block:Photoset}
-                <li>
-                  <div class="photosets">
-                    {block:indexpage}
-                      {block:ifnotgallerymode}
-                        {block:ifusebiggerposts}
-                          <div class="photoset-photos">
-                            {block:Photos}
-                              <img src="{PhotoURL-500}" class="small">
-                            {/block:Photos}
-                          </div>
-                        {/block:ifusebiggerposts}
-
-                        {Photoset-700}
-                      {/block:ifnotgallerymode}
-
-                      {block:ifgallerymode}
-                        {block:ifusebiggerposts}
-                          {Photoset-400}
-                        {/block:ifusebiggerposts}
-
-                        {block:ifnotusebiggerposts}
-                          {Photoset-250}
-                        {/block:ifnotusebiggerposts}
-                      {/block:ifgallerymode}
-                    {/block:indexpage}
-
-                    {block:permalinkpage}
-                      {Photoset-500}
-                    {/block:permalinkpage}
-                  </div>
-
-                  {block:indexpage}
-                    {block:ifusecaption}
-                      {block:ifgallerymode}
-                        <div class="caption">
-                          <div class="caption_inner">
-                            {block:ifnothidecaption}
-                              {Caption}
-                            {/block:ifnothidecaption}
-
-                            {block:ifnothidetags}
-                              {block:HasTags}
-                                <div class="fix-it-tag"><br>{block:tags}<a href="{TagURL}" class="tags_URL"># <span class="freezing">{tag}</span></a> {/block:tags}</div>
-                              {/block:HasTags}
-                            {/block:ifnothidetags}
-
-                            <div class="note-count-no-caption-no-like">
-                              <a href="{permalink}" target="_blank">{block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} {lang:Notes} {/block:NoteCount}{/block:ifusebiggerposts}{block:ifnotusebiggerposts}{notecount} {lang:Notes} {block:ifnotusebiggerposts}</a>
-
-                              <div class="shareit">
-                                <span>{likebutton size="14"}</span>
-                                <span>{Reblogbutton size="14"}</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      {/block:ifgallerymode}
-
-                      {block:ifnotgallerymode}
-                        <div class="caption">
-                          <div class="caption_inner">
-                            {block:ifnothidecaption}
-                              {Caption}
-                            {/block:ifnothidecaption}
-
-                            {block:ifnothidetags}
-                              {block:HasTags}
-                                <div class="fix-it-tag"><br>{block:tags}<a href="{TagURL}" class="tags_URL"># <span class="freezing">{tag}</span></a> {/block:tags}</div>
-                              {/block:HasTags}
-                            {/block:ifnothidetags}
-
-                            <div class="note-count-no-caption-no-like">
-                              <a href="{permalink}" target="_blank">{block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} {lang:Notes} {/block:NoteCount}{/block:ifusebiggerposts}{block:ifnotusebiggerposts}{notecount} {lang:Notes} {block:ifnotusebiggerposts}</a>
-
-                              <div class="shareit">
-                                <span>{likebutton size="14"}</span>
-                                <span>{Reblogbutton size="14"}</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      {/block:ifnotgallerymode}
-                    {/block:ifusecaption}
-
-                    {block:ifnotusecaption}
-                      <div class="caption">
-                        <div class="caption_inner">
-                          {block:ifnothidecaption}
-                            {Caption}
-                          {/block:ifnothidecaption}
-
-                          {block:ifnothidetags}
-                            {block:HasTags}
-                              <div class="fix-it-tag"><br>{block:tags}<a href="{TagURL}" class="tags_URL"># <span class="freezing">{tag}</span></a> {/block:tags}</div>
-                            {/block:HasTags}
-                          {/block:ifnothidetags}
-
-                          <div class="note-count-no-caption-no-like">
-                            <a href="{permalink}" target="_blank">{block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} {lang:Notes} {/block:NoteCount}{/block:ifusebiggerposts}{block:ifnotusebiggerposts}{notecount} {lang:Notes} {block:ifnotusebiggerposts}</a>
-
-                            <div class="shareit">
-                              <span>{likebutton size="14"}</span>
-                              <span>{Reblogbutton size="14"}</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    {/block:ifnotusecaption}
-                  {/block:indexpage}
-
-                  {block:permalinkpage}
-                    <div class="caption">
-                      <div class="caption_inner">
-                        {Caption}
-
-                        {block:ifnothidetags}
-                          {block:HasTags}
-                            <div class="fix-it-tag"><br>{block:tags}<a href="{TagURL}" class="tags_URL"># <span class="freezing">{tag}</span></a> {/block:tags}</div>
-                          {/block:HasTags}
-                        {/block:ifnothidetags}
-
-                        <div class="note-count">
-                          <a href="{permalink}" target="_blank">{block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} {lang:Notes} {/block:NoteCount}{/block:ifusebiggerposts}{block:ifnotusebiggerposts}{notecount} {lang:Notes} {block:ifnotusebiggerposts}</a>
-
-                          <div class="shareit">
-                            <span>{likebutton size="14"}</span>
-                            <span>{Reblogbutton size="14"}</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  {/block:permalinkpage}
-                </li>
-              {/block:Photoset}
-
-              <!-- Quote block -->
-              {block:Quote}
-                <li>
-                  <li class="source quoty">"{Quote}"</li>
-                  {block:Source}
-                    <div class="quote">– {Source}</div>
-                  {/block:Source}
-
-                  <div class="note-count text_based">
-                    <a href="{permalink}" target="_blank">{block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} {lang:Notes} {/block:NoteCount}{/block:ifusebiggerposts}{block:ifnotusebiggerposts}{notecount} {lang:Notes} {block:ifnotusebiggerposts}</a>
-
-                    <div class="shareit">
-                      <span>{likebutton size="14"}</span>
-                      <span>{Reblogbutton size="14"}</span>
-                    </div>
-                  </div>
-                </li>
-              {/block:Quote}
-
-              <!-- Link block -->
-              {block:Link}
-                <li class="link">
-                  {block:Thumbnail}
-                    <img src="{Thumbnail}" class="linkthumb" class="small">
-                  {/block:Thumbnail}
-
-                  <div class="link-name">
-                    <a href="{URL}" class="link" {Target}>{Name}</a>
-                  </div>
-
-                  {block:Description}
-                    <div class="description">{Description}</div>
-                  {/block:Description}
-
-                  <div class="note-count text_based">
-                    <a href="{permalink}" target="_blank">
-                      {block:ifusebiggerposts}
-                        {Month} {DayOfMonth}
-                        {block:NoteCount} – {notecount} {lang:Notes}{/block:NoteCount}
-                      {/block:ifusebiggerposts}
-
-                      {block:ifnotusebiggerposts}
-                        {notecount} {lang:Notes}
-                      {/block:ifnotusebiggerposts}
-                    </a>
-
-                    <div class="shareit">
-                      <span>{likebutton size="14"}</span>
-                      <span>{Reblogbutton size="14"}</span>
-                    </div>
-                  </div>
-                </li>
-              {/block:Link}
-
-              <!-- Chat block -->
-              {block:Chat}
-                <li class="chat">
-                  {block:Title}
-                    <h3><a href="{Permalink}" target="_blank">{Title}</a></h3>
-                  {/block:Title}
-
-                  <ul class="chat">
-                    {block:Lines}
-                      <li class="{Alt} user_{UserNumber}">
-                        {block:Label}<span class="label">{Label}</span>{/block:Label}
-                        {Line}
-                      </li>
-                    {/block:Lines}
-                  </ul>
-
-                  <div class="note-count text_based">
-                    <a href="{permalink}" target="_blank">{block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} {lang:Notes} {/block:NoteCount}{/block:ifusebiggerposts}{block:ifnotusebiggerposts}{notecount} {lang:Notes} {block:ifnotusebiggerposts}</a>
-
-                    <div class="shareit">
-                      <span>{likebutton size="14"}</span>
-                      <span>{Reblogbutton size="14"}</span>
-                    </div>
-                  </div>
-                </li>
-              {/block:Chat}
-
-              <!-- Video block -->
-              {block:Video}
-                <li class="video">
-                  <div class="video_inner">
-                    <div class="video2">
-                      {block:indexpage}
-                        {block:ifnotgallerymode}
-                          {video-700}
-                        {/block:ifnotgallerymode}
-
-                        {block:ifgallerymode}
-                          {block:ifusebiggerposts}
-                            {video-400}
-                          {/block:ifusebiggerposts}
-
-                          {block:ifnotusebiggerposts}
-                            {video-250}
-                          {/block:ifnotusebiggerposts}
-                        {/block:ifgallerymode}
-                      {/block:indexpage}
-
-                      {block:permalinkpage}
-                        {Video-500}
-                      {/block:permalinkpage}
-                    </div>
-                  </div>
-
-                  {block:indexpage}
-                    {block:ifusecaption}
-                      {block:ifgallerymode}
-                        <div class="caption">
-                          <div class="caption_inner">
-                            {block:ifnothidecaption}
-                              {Caption}
-                            {/block:ifnothidecaption}
-
-                            {block:ifnothidetags}
-                              {block:HasTags}
-                                <div class="fix-it-tag"><br>{block:tags}<a href="{TagURL}" class="tags_URL"># <span class="freezing">{tag}</span></a> {/block:tags}</div>
-                              {/block:HasTags}
-                            {/block:ifnothidetags}
-
-                            <div class="note-count {block:caption}note-count-no-caption{/block:caption}">
-                              <a href="{permalink}" target="_blank">{block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} {lang:Notes} {/block:NoteCount}{/block:ifusebiggerposts}{block:ifnotusebiggerposts}{notecount} {lang:Notes} {block:ifnotusebiggerposts}</a>
-
-                              <div class="shareit">
-                                <span>{likebutton size="14"}</span>
-                                <span>{Reblogbutton size="14"}</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      {/block:ifgallerymode}
-
-                      {block:ifnotgallerymode}
-                        <div class="caption">
-                          <div class="caption_inner">
-                            {block:ifnothidecaption}
-                              {Caption}
-                            {/block:ifnothidecaption}
-
-                            {block:ifnothidetags}
-                              {block:HasTags}
-                                <div class="fix-it-tag"><br>{block:tags}<a href="{TagURL}" class="tags_URL"># <span class="freezing">{tag}</span></a> {/block:tags}</div>
-                              {/block:HasTags}
-                            {/block:ifnothidetags}
-
-                            <div class="note-count {block:caption}note-count-no-caption{/block:caption}">
-                              <a href="{permalink}" target="_blank">{block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} {lang:Notes} {/block:NoteCount}{/block:ifusebiggerposts}{block:ifnotusebiggerposts}{notecount} {lang:Notes} {block:ifnotusebiggerposts}</a>
-
-                              <div class="shareit">
-                                <span>{likebutton size="14"}</span>
-                                <span>{Reblogbutton size="14"}</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      {/block:ifnotgallerymode}
-                    {/block:ifusecaption}
-
-                    {block:ifnotusecaption}
-                      <div class="caption">
-                        <div class="caption_inner">
-                          {block:ifnothidecaption}
-                            {Caption}
-                          {/block:ifnothidecaption}
-
-                          {block:ifnothidetags}
-                            {block:HasTags}
-                              <div class="fix-it-tag"><br>{block:tags}<a href="{TagURL}" class="tags_URL"># <span class="freezing">{tag}</span></a> {/block:tags}</div>
-                            {/block:HasTags}
-                          {/block:ifnothidetags}
-
-                          <div class="note-count-no-caption-no-like">
-                            <a href="{permalink}" target="_blank">{block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} {lang:Notes} {/block:NoteCount}{/block:ifusebiggerposts}{block:ifnotusebiggerposts}{notecount} {lang:Notes} {block:ifnotusebiggerposts}</a>
-
-                            <div class="shareit">
-                              <span>{likebutton size="14"}</span>
-                              <span>{Reblogbutton size="14"}</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    {/block:ifnotusecaption}
-                  {/block:indexpage}
-
-                  {block:permalinkpage}
-                    <div class="caption">
-                      <div class="caption_inner">
-                        {Caption}
-
-                        {block:ifnothidetags}
-                          {block:HasTags}
-                            <div class="fix-it-tag"><br>{block:tags}<a href="{TagURL}" class="tags_URL"># <span class="freezing">{tag}</span></a> {/block:tags}</div>
-                          {/block:HasTags}
-                        {/block:ifnothidetags}
-
-                        <div class="note-count">
-                          <a href="{permalink}" target="_blank">{block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} {lang:Notes} {/block:NoteCount}{/block:ifusebiggerposts}{block:ifnotusebiggerposts}{notecount} {lang:Notes} {block:ifnotusebiggerposts}</a>
-
-                          <div class="shareit">
-                            <span>{likebutton size="14"}</span>
-                            <span>{Reblogbutton size="14"}</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  {/block:permalinkpage}
-                </li>
-              {/block:Video}
-
-              <!-- Audio block -->
-              {block:Audio}
-                <li class="audio">
-                  <div class="audio_embed">
-                    {block:indexpage}
-                      {block:ifnotgallerymode}
-                        {AudioEmbed-700}
-                      {/block:ifnotgallerymode}
-
-                      {block:ifgallerymode}
-                        {block:ifusebiggerposts}
-                          {AudioEmbed-400}
-                        {/block:ifusebiggerposts}
-
-                        {block:ifnotusebiggerposts}
-                          {AudioEmbed-250}
-                        {/block:ifnotusebiggerposts}
-                      {/block:ifgallerymode}
-                    {/block:indexpage}
-
-                    {block:permalinkpage}
-                      {AudioEmbed-500}
-                    {/block:permalinkpage}
-                  </div>
-
-                  {block:indexpage}
-                    {block:ifusecaption}
-                      {block:ifgallerymode}
-                        <div class="caption">
-                          <div class="caption_inner">
-                            {block:ifnothidecaption}
-                              {Caption}
-                            {/block:ifnothidecaption}
-
-                            {block:ifnothidetags}
-                              {block:HasTags}
-                                <div class="fix-it-tag"><br>{block:tags}<a href="{TagURL}" class="tags_URL"># <span class="freezing">{tag}</span></a> {/block:tags}</div>
-                              {/block:HasTags}
-                            {/block:ifnothidetags}
-
-                            <div class="note-count {block:caption}note-count-no-caption{/block:caption}">
-                              <a href="{permalink}" target="_blank">{block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} {lang:Notes} {/block:NoteCount}{/block:ifusebiggerposts}{block:ifnotusebiggerposts}{notecount} {lang:Notes} {block:ifnotusebiggerposts}</a>
-
-                              <div class="shareit">
-                                <span>{likebutton size="14"}</span>
-                                <span>{Reblogbutton size="14"}</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      {/block:ifgallerymode}
-
-                      {block:ifnotgallerymode}
-                        <div class="caption">
-                          <div class="caption_inner">
-                            {block:ifnothidecaption}
-                              {Caption}
-                            {/block:ifnothidecaption}
-
-                            {block:ifnothidetags}
-                              {block:HasTags}
-                                <div class="fix-it-tag"><br>{block:tags}<a href="{TagURL}" class="tags_URL"># <span class="freezing">{tag}</span></a> {/block:tags}</div>
-                              {/block:HasTags}
-                            {/block:ifnothidetags}
-
-                            <div class="note-count {block:caption}note-count-no-caption{/block:caption}">
-                              <a href="{permalink}" target="_blank">{block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} {lang:Notes} {/block:NoteCount}{/block:ifusebiggerposts}{block:ifnotusebiggerposts}{notecount} {lang:Notes} {block:ifnotusebiggerposts}</a>
-
-                              <div class="shareit">
-                                <span>{likebutton size="14"}</span>
-                                <span>{Reblogbutton size="14"}</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      {/block:ifnotgallerymode}
-                    {/block:ifusecaption}
-
-                    {block:ifnotusecaption}
-                      <div class="caption">
-                        <div class="caption_inner">
-                          {block:ifnothidecaption}
-                            {Caption}
-                          {/block:ifnothidecaption}
-
-                          {block:ifnothidetags}
-                            {block:HasTags}
-                              <div class="fix-it-tag"><br>{block:tags}<a href="{TagURL}" class="tags_URL"># <span class="freezing">{tag}</span></a> {/block:tags}</div>
-                            {/block:HasTags}
-                          {/block:ifnothidetags}
-
-                          <div class="note-count-no-caption-no-like">
-                            <a href="{permalink}" target="_blank">{block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} {lang:Notes} {/block:NoteCount}{/block:ifusebiggerposts}{block:ifnotusebiggerposts}{notecount} {lang:Notes} {block:ifnotusebiggerposts}</a>
-
-                            <div class="shareit">
-                              <span>{likebutton size="14"}</span>
-                              <span>{Reblogbutton size="14"}</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    {/block:ifnotusecaption}
-                  {/block:indexpage}
-
-                  {block:permalinkpage}
-                    <div class="caption">
-                      <div class="caption_inner">
-                        {Caption}
-
-                        {block:ifnothidetags}
-                          {block:HasTags}
-                            <div class="fix-it-tag"><br>{block:tags}<a href="{TagURL}" class="tags_URL"># <span class="freezing">{tag}</span></a> {/block:tags}</div>
-                          {/block:HasTags}
-                        {/block:ifnothidetags}
-
-                        <div class="note-count">
-                          <a href="{permalink}" target="_blank">{block:ifusebiggerposts}{Month} {DayOfMonth}{block:NoteCount} – {notecount} {lang:Notes} {/block:NoteCount}{/block:ifusebiggerposts}{block:ifnotusebiggerposts}{notecount} {lang:Notes} {block:ifnotusebiggerposts}</a>
-
-                          <div class="shareit">
-                            <span>{likebutton size="14"}</span>
-                            <span>{Reblogbutton size="14"}</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  {/block:permalinkpage}
-                </li>
-              {/block:Audio}
-            </div>
-          </div>
-
-          {block:permalinkpage}{/block:permalinkpage}
-        {/block:Posts}
-
-        {block:permalinkpage}
-          {block:PostNotes}
-            <div class="post">
-              <div class="inner_container" style="padding:10px;">
-                <div class="postnotes">
-                  {block:Posts}
-                    <script>
-                      $(document).ready(function (){
-                        {block:photo}$('.post-disqus').fadeIn(1500);{/block:photo}{block:Audio}$('.post-disqus').fadeIn(1500);{/block:Audio}{block:Answer}$('.post-disqus').fadeIn(1500);{/block:Answer}{block:quote}$('.post-disqus').fadeIn(1500);{/block:quote}{block:text}$('.post-disqus').fadeIn(1500);{/block:text}{block:Panorama}$('.post-disqus').fadeIn(1500);{/block:Panorama}{block:link}$('.post-disqus').fadeIn(1500);{/block:link}{block:video}$('.post-disqus').fadeIn(1500);{/block:video}{block:chat}$('.post-disqus').fadeIn(1500);{/block:chat}{block:Audio}$('.post-disqus').fadeIn(1500);{/block:Audio}{block:Photoset}$('.post-disqus').fadeIn(1500);{/block:Photoset}
-                      });
-                    </script>
-
-                    <div class="post-padding">
-                      <div class="post-padding2">{PostNotes-16}</div>
-                    </div>
-                  {/block:Posts}
-                </div>
-              </div>
-            </div>
-          {/block:PostNotes}
-
-          {block:PermalinkPagination}
-            {block:IfDisqusShortname}
-              <div class="post post-disqus" style="color:#000000 !important;">
-                <div class="inner_container" style="padding:20px;padding-left:30px;padding-right:30px;">
-                  <div>
-                    <div id="disqus_thread"></div>
-
-                    <script type="text/javascript">
-                      var disqus_shortname = '{text:Disqus Shortname}';
-                      (function() {
-                        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                      })();
-                    </script>
-                  </div>
-                </div>
-              </div>
-            {/block:IfDisqusShortname}
-          {/block:PermalinkPagination}
-        {/block:permalinkpage}
-
+                </a>
+              </li>
+            {/block:Photo}
+          {/block:Posts}
+        </ul>
       </div>
     </div>
 
-    <div id="pagination">
-      <li>
-        {block:Pagination}
-          {block:PreviousPage}
-            <a href="{PreviousPage}"></a>
-          {/block:PreviousPage}
+    <ul class="pagination">
+      {block:Pagination}
+        {block:PreviousPage}
+          <li><a href="{PreviousPage}" class="pagination_prevlink">Previous</a></li>
+        {/block:PreviousPage}
 
-          {block:NextPage}
-            <a {block:ifnotusepagination} href="{NextPage}" {/block:ifnotusepagination} class="pagination_nextlink"></a>
-          {/block:NextPage}
-        {/block:Pagination}
-      </li>
-    </div>
-
-    {block:ifusepagination}
-      <div class="pagination">
-        {block:Pagination}
-          {block:PreviousPage}
-            <a href="{PreviousPage}" class="prev">Previous</a>
-          {/block:PreviousPage}
-
-          {block:NextPage}
-            <a href="{NextPage}" class="next">Next</a>
-          {/block:NextPage}
-        {/block:Pagination}
-      </div>
-    {/block:ifusepagination}
+        {block:NextPage}
+          <li><a href="{NextPage}" class="pagination_nextlink">Next</a></li>
+        {/block:NextPage}
+      {/block:Pagination}
+    </ul>
   </body>
+
+  <script>
+    $(window).load(function() {
+      var postList = $('.list');
+
+      $('.content').animate({
+        'opacity': '1',
+      }, 800);
+
+      postList.masonry({
+        itemSelector: '.post',
+        isFitWidth: true,
+      });
+
+      postList.infinitescroll({
+        navSelector: '.pagination',
+        nextSelector: '.pagination li .pagination_nextlink',
+        itemSelector: '.post',
+      }, function(elm) {
+        // elm.forEach(function(el, i) {
+        //   var randDuration = (Math.random() * 0.3 + 0.5) + 's';
+
+        //   $(el).css({
+        //     '-webkit-transition-delay': randDuration,
+        //     '-ms-transition-delay': randDuration,
+        //     'transition-delay': randDuration,
+        //   });
+        // });
+
+        var nextPosts = $(elm).css({
+          '-webkit-transform': 'translateY(60px)',
+          '-ms-transform': 'translateY(60px)',
+          'transform': 'translateY(60px)',
+        });
+
+        nextPosts.animate({
+          '-webkit-transform': 'translateY(0)',
+          '-ms-transform': 'translateY(0)',
+          'transform': 'translateY(0)',
+        });
+
+        nextPosts.imagesLoaded(function() {
+          // postList.append(nextPosts).masonry('appended', nextPosts);
+          postList.masonry('appended', nextPosts);
+        });
+      });
+    });
+  </script>
 </html>
