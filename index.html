@@ -33,16 +33,18 @@
     <link rel="icon" type="image/png" href="{Favicon}" sizes="192x192">
     <link rel="icon" type="image/png" href="{Favicon}" sizes="96x96">
     <link rel="icon" type="image/png" href="{Favicon}" sizes="16x16">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffc40d">
-    <meta name="msapplication-TileImage" content="{Favicon}">
-    <meta name="theme-color" content="#ffffff">
 
-    <!-- SCRIPTS -->
+    <!-- Logo upload in Tumblr -->
+    <meta name="image:Logo" content="" />
+    <meta name="image:Logo Retina" content="" />
+
+    <!-- Assets -->
     <script src="http://static.tumblr.com/cvhjz4y/JWSn5a9bq/jquery.min.js"></script>
-    <script src="https://static.tumblr.com/0ppiv8o/nF8o3sfb4/masonry.js"></script>
-    <script src="http://static.tumblr.com/16wo1wg/FG6nqh7ga/jquery.infinitescroll.min.js"></script>
-    <script src="http://static.tumblr.com/cvhjz4y/Ts5n5rpic/loaded.js"></script>
+    <script src="http://static.tumblr.com/nczltly/G62oeq8jf/masonry.pkgd.min.js"></script>
+    <script src="http://static.tumblr.com/nczltly/08Eoeqldv/jquery.infinitescroll.min.js"></script>
+    <script src="http://static.tumblr.com/nczltly/7Xaoeq8jl/imagesloaded.pkgd.min.js"></script>
+    <script src="http://static.tumblr.com/nczltly/ml5oeq993/lity.min.js"></script>
+    <link href="http://static.tumblr.com/nczltly/z7aoeq99c/lity.min.css" rel="stylesheet">
 
     <!-- HTML5 Shiv -->
     <!--[if lt IE 9]>
@@ -122,8 +124,8 @@
       * HEADER
       */
       .header {
-        padding-top: 200px;
-        padding-bottom: 140px;
+        padding-top: 180px;
+        padding-bottom: 160px;
         text-align: center;
       }
 
@@ -140,7 +142,7 @@
         font-size: 12px;
         margin-left: 6px;
         margin-right: 6px;
-        color: #CCCCCC;
+        color: #ccc;
         text-decoration: none;
         transition: color 400ms ease;
       }
@@ -152,21 +154,21 @@
         left: 0;
         width: 0;
         height: 2px;
-        background-color: #CCCCCC;
+        background-color: #ccc;
         transition: width 400ms ease;
       }
 
       .header .menu li:hover a {
-        color: #58AEE1;
+        color: #58aee1;
       }
 
       .header .menu li:hover a::before {
         width: 100%;
-        background-color: #58AEE1;
+        background-color: #58aee1;
       }
 
       /*
-      * PHOTOS
+      * PHOTOS POST
       */
       .content .list {
         margin: 0 auto;
@@ -179,12 +181,13 @@
       .content .list .post {
         position: relative;
         max-width: 400px;
-        margin: 30px;
+        margin: 0 30px 60px;
         cursor: pointer;
+        outline: 0;
         -webkit-transform: translateY(60px);
         -moz-transform: translateY(60px);
         transform: translateY(60px);
-        transition: 300ms all ease;
+        transition: 400ms all ease;
         opacity: 0;
       }
 
@@ -198,11 +201,14 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(82, 158, 204, .65);
+        background-color: rgba(82, 158, 204, .75);
         opacity: 0;
         transition: 400ms opacity ease;
       }
 
+      /*
+      * BUTTONS
+      */
       .content .list .post .details .buttons {
         position: relative;
         display: inline-block;
@@ -211,11 +217,75 @@
         transform: translate(-50%, -50%);
       }
 
+      .content .list .post .details .buttons li {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 20px;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+      }
+
+      .content .list .post .details .buttons li:last-of-type {
+        margin-right: 0;
+      }
+
+      .content .list .post .details .buttons .like-group .like_button {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        z-index: 10;
+      }
+
+      .content .list .post .details .buttons .like-group .like_button iframe {
+        width: 100% !important;
+        height: 100% !important;
+      }
+
+      .content .list .post .details .buttons .like-group .like_button:hover + .custom-like svg path,
+      .content .list .post .details .buttons .reblog-group:hover svg path {
+        fill: #58aee1;
+      }
+
+      .content .list .post .details .buttons .like-group .like_button.liked + .custom-like svg path {
+        fill: #d74545;
+      }
+
+      .content .list .post .details .buttons .like-group .custom-like {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        cursor: pointer;
+      }
+
+      .content .list .post .details .buttons .like-group .custom-like svg path,
+      .content .list .post .details .buttons .reblog-group svg path {
+        transition: fill 400ms ease;
+      }
+
       /*
-      * MISCELLANEOUS
+      * LOADER
       */
-      #infscr-loading {
-        display: none !important;
+      .loader {
+        text-align: center;
+        margin-top: 70px;
+        margin-bottom: 100px;
+      }
+
+      .loader .posts-end {
+        font-size: 14px;
+        color: #ccc;
       }
 
       /*
@@ -230,7 +300,7 @@
         font-size: 12px;
         margin-left: 6px;
         margin-right: 6px;
-        color: #CCCCCC;
+        color: #ccc;
         text-decoration: none;
         transition: color 400ms ease;
       }
@@ -240,7 +310,7 @@
   <body>
     <div class="container">
       <div class="header">
-        <h1><img src="https://secure.static.tumblr.com/553540ddd4ce6b9009c248468b1fc440/nczltly/EJeod02y4/tumblr_static_drt9c0x5l7480ws8oc0kso8ss.png" alt=""></h1>
+        <h1><img src="{image:logo}" srcset="{image:logo retina} 2x" alt="{Title}"></h1>
 
         <ul class="menu">
           <li><a href="https://www.jerembarbet.com/">portfolio</a></li>
@@ -254,30 +324,37 @@
         <ul class="list">
           {block:Posts}
             {block:Photo}
-              <li class="post">
-                <a href="{PhotoURL-Highres}">
+              <li class="post" id="{postID}">
+                <a href="{PhotoURL-Highres}" data-lity>
                   <img src="{PhotoURL-500}">
 
                   <div class="details">
-                    <div class="buttons">
-                      <divabc>
-                        <div class="positioning">{LikeButton color="white" size="11"}</div>
-                      </divabc>
+                    <ul class="buttons">
+                      <li class="like-group">
+                        {LikeButton size="20"}
 
-                      <divabc onclick="window.open('{ReblogURL}');">
-                        {ReblogButton color="white" size="11"}
-                      </divabc>
+                        <span class="custom-like">
+                          <svg width="18px" height="18px" viewBox="0 0 19 16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#ffffff">
+                            <path d="M14.0425097,0.000920262799 C16.1435097,-0.0400797372 18.8835097,1.28192026 18.9635097,5.36992026 C19.0525097,9.95492026 15.1985097,13.3079203 9.48350967,16.2089203 C3.76650967,13.3079203 -0.0874903349,9.95492026 0.00150966509,5.36992026 C0.0815096651,1.28192026 2.82150967,-0.0400797372 4.92250967,0.000920262799 C7.02450967,0.0419202628 8.87050967,2.26592026 9.46950967,2.92792026 C10.0945097,2.26592026 11.9405097,0.0419202628 14.0425097,0.000920262799 Z"></path>
+                          </svg>
+                        </span>
+                      </li>
 
-                      <divabc onclick="window.open('{Permalink}');">
-                        {permalinkbutton color="white" size="11"}
-                      </divabc>
-                    </div>
+                      <li class="reblog-group" onclick="window.open('{ReblogURL}'); event.preventDefault();">
+                        <svg width="18px" height="18px" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#ffffff">
+                          <path d="M5.01092527,5.99908429 L16.0088498,5.99908429 L16.136,9.508 L20.836,4.752 L16.136,0.083 L16.1360004,3.01110845 L2.09985349,3.01110845 C1.50585349,3.01110845 0.979248041,3.44726568 0.979248041,4.45007306 L0.979248041,10.9999998 L3.98376463,8.30993634 L3.98376463,6.89801007 C3.98376463,6.20867902 4.71892527,5.99908429 5.01092527,5.99908429 Z"></path>
+                          <path d="M17.1420002,13.2800293 C17.1420002,13.5720293 17.022957,14.0490723 16.730957,14.0490723 L4.92919922,14.0490723 L4.92919922,11 L0.5,15.806 L4.92919922,20.5103758 L5.00469971,16.9990234 L18.9700928,16.9990234 C19.5640928,16.9990234 19.9453125,16.4010001 19.9453125,15.8060001 L19.9453125,9.5324707 L17.142,12.203"></path>
+                        </svg>
+                      </li>
+                    </ul>
                   </div>
                 </a>
               </li>
             {/block:Photo}
           {/block:Posts}
         </ul>
+
+        <div class="loader"><p class="posts-end"></p></div>
       </div>
     </div>
 
@@ -296,28 +373,26 @@
 
   <script>
     $(window).load(function() {
-      var postList = $('.list');
+      // Global selectors
+      const post = '.post';
+      const postList = $('.list');
 
-      // $('.content').animate({
-      //   'opacity': '1',
-      // }, 800);
+      // Item animation
+      const translate = 'translateY(0)';
+      const delay = (i) => (95 * (i + 2)) + 'ms';
 
       postList.imagesLoaded(function() {
-        console.log('all images loaded go to display masonry');
-
         postList.masonry({
-          itemSelector: '.post',
+          itemSelector: post,
           isFitWidth: true,
+          transitionDuration: 0,
         });
 
-        postList.find('.post').map(function(i) {
-          var delay = (85 * (i + 2)) + 'ms';
-          var translate = 'translateY(0)';
-
+        postList.find(post).map(function(i) {
           $(this).css({
-            '-webkit-transition-delay': delay,
-            '-ms-transition-delay': delay,
-            'transition-delay': delay,
+            '-webkit-transition-delay': delay(i),
+            '-ms-transition-delay': delay(i),
+            'transition-delay': delay(i),
 
             '-webkit-transform': translate,
             '-ms-transform': translate,
@@ -331,45 +406,26 @@
       postList.infinitescroll({
         navSelector: '.pagination',
         nextSelector: '.pagination li .pagination_nextlink',
-        itemSelector: '.post',
-      }, function(nextPosts) {
-        // console.log(nextPosts);
+        itemSelector: post,
+        bufferPx: 600,
+        loading: {
+          selector: '.loader',
+          finishedMsg: 'Wow, you just watched all my photos. Thanks! 🎉',
+          msg: $('<svg width="38" height="38" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" stroke="#333"><g fill="none" fill-rule="evenodd"><g transform="translate(1 1)" stroke-width="2"><circle stroke-opacity=".5" cx="18" cy="18" r="18" /><path d="M36 18c0-9.94-8.06-18-18-18"><animateTransform attributeName="transform" type="rotate" from="0 18 18" to="360 18 18" dur="1s" repeatCount="indefinite" /></path></g></g></svg>'),
+        },
+      }, function(elements) {
+        const nextPosts = $(elements);
 
-        // elm.forEach(function(el, i) {
-        //   var randDuration = (Math.random() * 0.3 + 0.5) + 's';
+        nextPosts.imagesLoaded(function() {
+          postList.append(nextPosts).masonry('appended', nextPosts);
 
-        //   $(el).css({
-        //     '-webkit-transition-delay': randDuration,
-        //     '-ms-transition-delay': randDuration,
-        //     'transition-delay': randDuration,
-        //   });
-        // });
-
-        // var nextPosts = $(elm).css({
-        //   '-webkit-transform': 'translateY(60px)',
-        //   '-ms-transform': 'translateY(60px)',
-        //   'transform': 'translateY(60px)',
-        // });
-
-        // nextPosts.animate({
-        //   '-webkit-transform': 'translateY(0)',
-        //   '-ms-transform': 'translateY(0)',
-        //   'transform': 'translateY(0)',
-        // });
-
-        $(nextPosts).imagesLoaded(function() {
-          postList.masonry('appended', nextPosts);
-
-          $(nextPosts).map(function(i) {
-            console.log(this);
-
-            var delay = (85 * (i + 2)) + 'ms';
-            var translate = 'translateY(0)';
+          nextPosts.map(function(i) {
+            Tumblr.LikeButton.get_status_by_post_ids(this.id);
 
             $(this).css({
-              '-webkit-transition-delay': delay,
-              '-ms-transition-delay': delay,
-              'transition-delay': delay,
+              '-webkit-transition-delay': delay(i),
+              '-ms-transition-delay': delay(i),
+              'transition-delay': delay(i),
 
               '-webkit-transform': translate,
               '-ms-transform': translate,
