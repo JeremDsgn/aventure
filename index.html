@@ -417,13 +417,14 @@
         },
       }, function(elements) {
         const nextPosts = $(elements);
+        const ids = nextPosts.map(() => this.id).get();
 
         nextPosts.imagesLoaded(function() {
+          Tumblr.LikeButton.get_status_by_post_ids(ids);
+
           postList.append(nextPosts).masonry('appended', nextPosts);
 
           nextPosts.map(function(i) {
-            Tumblr.LikeButton.get_status_by_post_ids(this.id);
-
             $(this).css({
               '-webkit-transition-delay': delay(i),
               '-ms-transition-delay': delay(i),
