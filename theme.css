@@ -123,8 +123,13 @@ body.tmblr-iframe--controls-phone-container { padding-top: 0 !important; }
   }
 }
 
+.navigation .nav-container .close {
+  display: none;
+}
+
 @media (max-width: 480px) {
   .navigation .nav-container .close {
+    display: block;
     position: fixed;
     background: #373c41;
     height: 42px;

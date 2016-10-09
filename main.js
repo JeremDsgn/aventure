@@ -14,6 +14,19 @@ $(window).load(function() {
   const translate = 'translateY(0)';
   const delay = (i) => (95 * (i + 2)) + 'ms';
 
+  const postAppear = (elm, i) =>
+    elm.css({
+      '-webkit-transition-delay': delay(i),
+      '-ms-transition-delay': delay(i),
+      'transition-delay': delay(i),
+
+      '-webkit-transform': translate,
+      '-ms-transform': translate,
+      'transform': translate,
+
+      'opacity': 1,
+    });
+
   // Tags navigation
   const tagsArray = [];
 
@@ -47,8 +60,6 @@ $(window).load(function() {
 
   // Close animation
   nav.on('click', function(e) {
-    console.log(e.target);
-
     nav.addClass('slideRight');
 
     setTimeout(() => {
@@ -66,18 +77,14 @@ $(window).load(function() {
       transitionDuration: 0,
     });
 
-    postList.find(post).map(function(i) {
-      $(this).css({
-        '-webkit-transition-delay': delay(i),
-        '-ms-transition-delay': delay(i),
-        'transition-delay': delay(i),
-
-        '-webkit-transform': translate,
-        '-ms-transform': translate,
-        'transform': translate,
-
-        'opacity': 1,
+    postList.on('layoutComplete', function() {
+      postList.find(post).map(function(i) {
+        postAppear($(this), i);
       });
+    });
+
+    postList.find(post).map(function(i) {
+      postAppear($(this), i);
     })
   });
 
@@ -101,17 +108,7 @@ $(window).load(function() {
       postList.append(nextPosts).masonry('appended', nextPosts);
 
       nextPosts.map(function(i) {
-        $(this).css({
-          '-webkit-transition-delay': delay(i),
-          '-ms-transition-delay': delay(i),
-          'transition-delay': delay(i),
-
-          '-webkit-transform': translate,
-          '-ms-transform': translate,
-          'transform': translate,
-
-          'opacity': 1,
-        });
+        postAppear($(this), i);
       });
     });
   });
