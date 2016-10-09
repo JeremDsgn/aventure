@@ -3,20 +3,10 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="description" content="">
+    <meta name="description" content="{MetaDescription}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{Title}{block:PermalinkPage}{block:PostSummary} — {PostSummary}{/block:PostSummary}{/block:PermalinkPage}</title>
     <meta property="og:title" content="{title}">
-
-    {block:Description}
-      <meta name="description" content="{MetaDescription}" />
-    {/block:Description}
-
-    {block:PermalinkPage}
-      {block:PostSummary}
-        <meta name="description" content="{PostSummary}" />
-      {/block:PostSummary}
-    {/block:PermalinkPage}
 
     <link rel="shortcut icon" href="{Favicon}" />
     <link rel="alternate" type="application/rss+xml" href="{RSS}">
