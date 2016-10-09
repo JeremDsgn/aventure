@@ -39,10 +39,12 @@
     <meta name="image:Logo Retina" content="" />
 
     <!-- Assets -->
-    <link href="https://fonts.googleapis.com/css?family=Khula:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Khula:300|Montserrat:400,700&subset=latin-ext" rel="stylesheet">
+    <link href="http://static.tumblr.com/nczltly/XGpoes4fx/theme.css" rel="stylesheet">
     <link href="http://static.tumblr.com/nczltly/z7aoeq99c/lity.min.css" rel="stylesheet">
 
     <script src="http://static.tumblr.com/cvhjz4y/JWSn5a9bq/jquery.min.js"></script>
+    <script src="http://static.tumblr.com/nczltly/d39oes56x/main.js"></script>
     <script src="http://static.tumblr.com/nczltly/G62oeq8jf/masonry.pkgd.min.js"></script>
     <script src="http://static.tumblr.com/nczltly/08Eoeqldv/jquery.infinitescroll.min.js"></script>
     <script src="http://static.tumblr.com/nczltly/7Xaoeq8jl/imagesloaded.pkgd.min.js"></script>
@@ -52,281 +54,42 @@
     <!--[if lt IE 9]>
       <script src="http://static.tumblr.com/hriofhd/Qj0m8pn7q/html5shiv.js"></script>
     <![endif]-->
-
-    <style>
-      /*
-      * RESET
-      */
-      html, body, div, span, applet, object, iframe,
-      h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-      a, abbr, acronym, address, big, cite, code,
-      del, dfn, em, img, ins, kbd, q, s, samp,
-      small, strike, strong, sub, sup, tt, var,
-      b, u, i, center,
-      dl, dt, dd, ol, ul, li,
-      fieldset, form, label, legend,
-      table, caption, tbody, tfoot, thead, tr, th, td,
-      article, aside, canvas, details, embed,
-      figure, figcaption, footer, header, hgroup,
-      menu, nav, output, ruby, section, summary,
-      time, mark, audio, video {
-        margin: 0;
-        padding: 0;
-        border: 0;
-        font-size: 100%;
-        font: inherit;
-        vertical-align: baseline;
-      }
-      /* HTML5 display-role reset for older browsers */
-      article, aside, details, figcaption, figure,
-      footer, header, hgroup, menu, nav, section {
-        display: block;
-      }
-      body {
-        line-height: 1;
-      }
-      ol, ul {
-        list-style: none;
-      }
-      blockquote, q {
-        quotes: none;
-      }
-      blockquote:before, blockquote:after,
-      q:before, q:after {
-        content: '';
-        content: none;
-      }
-      table {
-        border-collapse: collapse;
-        border-spacing: 0;
-      }
-
-      img {
-        vertical-align: bottom;
-        max-width: 100%;
-      }
-
-      /*
-      * CONTAINER
-      */
-
-      body {
-        font-family: 'Khula', arial, sans-serif;
-        -moz-osx-font-smoothing: grayscale;
-        font-smoothing: antialiased;
-        text-rendering: optimizelegibility;
-      }
-
-      .container {
-        padding-left: 30px;
-        padding-right: 30px;
-      }
-
-      /*
-      * HEADER
-      */
-      .header {
-        padding-top: 180px;
-        padding-bottom: 160px;
-        text-align: center;
-      }
-
-      .header .menu {
-        margin-top: 40px;
-      }
-
-      .header .menu li {
-        display: inline-block;
-      }
-
-      .header .menu li a {
-        position: relative;
-        font-size: 16px;
-        margin-left: 6px;
-        margin-right: 6px;
-        color: #ccc;
-        text-decoration: none;
-        transition: color 400ms ease;
-      }
-
-      .header .menu li a::before {
-        content: '';
-        position: absolute;
-        bottom: -4px;
-        left: 0;
-        width: 0;
-        height: 2px;
-        background-color: #ccc;
-        transition: width 400ms ease;
-      }
-
-      .header .menu li:hover a {
-        color: #58aee1;
-      }
-
-      .header .menu li:hover a::before {
-        width: 100%;
-        background-color: #58aee1;
-      }
-
-      /*
-      * PHOTOS POST
-      */
-      .content .list {
-        margin: 0 auto;
-      }
-
-      .content .list .post a {
-        display: block;
-      }
-
-      .content .list .post {
-        position: relative;
-        max-width: 400px;
-        margin: 0 30px 60px;
-        cursor: pointer;
-        outline: 0;
-        -webkit-transform: translateY(60px);
-        -moz-transform: translateY(60px);
-        transform: translateY(60px);
-        transition: 400ms all ease;
-        opacity: 0;
-      }
-
-      .content .list .post:hover .details {
-        opacity: 1;
-      }
-
-      .content .list .post .details {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(82, 158, 204, .75);
-        opacity: 0;
-        transition: 400ms opacity ease;
-      }
-
-      /*
-      * BUTTONS
-      */
-      .content .list .post .details .buttons {
-        position: relative;
-        display: inline-block;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
-
-      .content .list .post .details .buttons li {
-        position: relative;
-        display: inline-block;
-        vertical-align: top;
-        margin-right: 20px;
-        width: 20px;
-        height: 20px;
-        cursor: pointer;
-      }
-
-      .content .list .post .details .buttons li:last-of-type {
-        margin-right: 0;
-      }
-
-      .content .list .post .details .buttons .like-group .like_button {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        width: 100%;
-        height: 100%;
-        opacity: 0;
-        z-index: 10;
-      }
-
-      .content .list .post .details .buttons .like-group .like_button iframe {
-        width: 100% !important;
-        height: 100% !important;
-      }
-
-      .content .list .post .details .buttons .like-group .like_button:hover + .custom-like svg path,
-      .content .list .post .details .buttons .reblog-group:hover svg path {
-        fill: #58aee1;
-      }
-
-      .content .list .post .details .buttons .like-group .like_button.liked + .custom-like svg path {
-        fill: #d74545;
-      }
-
-      .content .list .post .details .buttons .like-group .custom-like {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-        cursor: pointer;
-      }
-
-      .content .list .post .details .buttons .like-group .custom-like svg path,
-      .content .list .post .details .buttons .reblog-group svg path {
-        transition: fill 400ms ease;
-      }
-
-      /*
-      * LOADER
-      */
-      .loader {
-        text-align: center;
-        margin-top: 70px;
-        margin-bottom: 100px;
-      }
-
-      .loader .posts-end {
-        font-size: 16px;
-        color: #ccc;
-      }
-
-      /*
-      * PAGINATION
-      */
-      .pagination {
-        display: none !important;
-        text-align: center;
-      }
-
-      .pagination li a {
-        font-size: 12px;
-        margin-left: 6px;
-        margin-right: 6px;
-        color: #ccc;
-        text-decoration: none;
-        transition: color 400ms ease;
-      }
-    </style>
   </head>
 
   <body>
+    <nav class="navigation">
+      <div class="nav-container">
+        <div class="nav-inner">
+          <ul class="nav-links">
+            <li class="title">About.</li>
+            <li>Discover all my pictures by location I have visited.</li>
+          </ul>
+
+          <ul class="nav-countries">
+            <li class="title">Countries.</li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
     <div class="container">
-      <div class="header">
+      <header class="header">
         <h1><img src="{image:logo}" srcset="{image:logo retina} 2x" alt="{Title}"></h1>
 
         <ul class="menu">
+          <li class="countries">countries</li>
           <li><a href="https://www.jeremybarbet.com/">portfolio</a></li>
           <li><a href="http://instagram.com/JeremDsgn">instagram</a></li>
           <li><a href="https://twitter.com/JeremDsgn">twitter</a></li>
           <li><a href="https://vimeo.com/JeremDsgn">vimeo</a></li>
         </ul>
-      </div>
+      </header>
 
-      <div class="content">
+      <main class="content">
         <ul class="list">
           {block:Posts}
             {block:Photo}
-              <li class="post" id="{postID}">
+              <li class="post" id="{postID}" {block:HasTags}{block:tags}data-tag="{tag}"{/block:tags}{/block:HasTags}>
                 <a href="{PhotoURL-Highres}" data-lity>
                   <img src="{PhotoURL-500}">
 
@@ -358,7 +121,7 @@
 
         <div class="loader"><p class="posts-end"></p></div>
       </div>
-    </div>
+    </main>
 
     <ul class="pagination">
       {block:Pagination}
@@ -372,73 +135,4 @@
       {/block:Pagination}
     </ul>
   </body>
-
-  <script>
-    $(window).load(function() {
-      // Global selectors
-      const post = '.post';
-      const postList = $('.list');
-
-      // Item animation
-      const translate = 'translateY(0)';
-      const delay = (i) => (95 * (i + 2)) + 'ms';
-
-      postList.imagesLoaded(function() {
-        postList.masonry({
-          itemSelector: post,
-          isFitWidth: true,
-          transitionDuration: 0,
-        });
-
-        postList.find(post).map(function(i) {
-          $(this).css({
-            '-webkit-transition-delay': delay(i),
-            '-ms-transition-delay': delay(i),
-            'transition-delay': delay(i),
-
-            '-webkit-transform': translate,
-            '-ms-transform': translate,
-            'transform': translate,
-
-            'opacity': 1,
-          });
-        })
-      });
-
-      postList.infinitescroll({
-        navSelector: '.pagination',
-        nextSelector: '.pagination li .pagination_nextlink',
-        itemSelector: post,
-        bufferPx: 600,
-        loading: {
-          selector: '.loader',
-          finishedMsg: 'Wow, you just watched all my photos. Thanks! 🎉',
-          msg: $('<svg width="38" height="38" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" stroke="#333"><g fill="none" fill-rule="evenodd"><g transform="translate(1 1)" stroke-width="2"><circle stroke-opacity=".5" cx="18" cy="18" r="18" /><path d="M36 18c0-9.94-8.06-18-18-18"><animateTransform attributeName="transform" type="rotate" from="0 18 18" to="360 18 18" dur="1s" repeatCount="indefinite" /></path></g></g></svg>'),
-        },
-      }, function(elements) {
-        const nextPosts = $(elements);
-        const ids = nextPosts.map(() => this.id).get();
-
-        nextPosts.imagesLoaded(function() {
-          Tumblr.LikeButton.get_status_by_post_ids(ids);
-
-          postList.append(nextPosts).masonry('appended', nextPosts);
-
-          nextPosts.map(function(i) {
-            $(this).css({
-              '-webkit-transition-delay': delay(i),
-              '-ms-transition-delay': delay(i),
-              'transition-delay': delay(i),
-
-              '-webkit-transform': translate,
-              '-ms-transform': translate,
-              'transform': translate,
-
-              'opacity': 1,
-            });
-          });
-        });
-      });
-    });
-  </script>
 </html>

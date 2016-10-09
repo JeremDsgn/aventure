@@ -1,0 +1,420 @@
+/*
+* RESET
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  vertical-align: bottom;
+  max-width: 100%;
+}
+
+/*
+* CONTAINER
+*/
+
+body {
+  font-family: 'Khula', arial, sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+}
+
+body.unscroll { overflow: hidden; }
+
+.container {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+/*
+* NAVIGATION
+*/
+.navigation {
+  display: none;
+  position: fixed;
+  background: #2b2f33;
+  cursor: url(http://static-beta.jeremybarbet.com/close.png), default;
+  width: 100%;
+  height: 100%;
+  z-index: 400;
+  padding-left: 100px;
+  padding-right: 100px;
+  box-sizing: border-box;
+  transition: all .200ms ease-in-out;
+  user-select: none;
+}
+
+.navigation .nav-container {
+  position: relative;
+  width: 1200px;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navigation .nav-container .nav-inner {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.navigation .nav-container .nav-inner ul {
+  transition: all 200ms ease-in-out;
+  transform: translateX(-40px);
+  opacity: 0;
+}
+
+.navigation .nav-container .nav-inner ul.fadeInLeft {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.navigation .nav-container ul:nth-child(1) { transition-delay: 50ms; }
+.navigation .nav-container ul:nth-child(2) { transition-delay: 100ms; }
+
+.navigation .nav-container .nav-inner ul li {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 20px;
+}
+
+.navigation .nav-container .nav-inner ul li:last-child {
+  margin-right: 0;
+}
+
+.navigation .nav-container .nav-inner ul li:last-child::after {
+  content: '';
+}
+
+.navigation .nav-container .nav-inner ul li.title {
+  font-family: 'Montserrat';
+  font-size: 18px;
+  color: #656f78;
+  line-height: 18px * 1.36;
+  font-weight: 400;
+  display: block;
+  margin-bottom: 25px;
+}
+
+.navigation .nav-container .nav-inner ul li.title::after {
+  content: '';
+}
+
+.navigation .nav-container .nav-inner ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.navigation .nav-container .nav-inner ul li a.active {
+  cursor: default;
+  color: #58aee1;
+  border-bottom: 2px solid #58aee1;
+  padding-bottom: 6px;
+}
+
+.navigation .nav-container .nav-inner ul li a:hover {
+  border-bottom: 2px solid white;
+  padding-bottom: 6px;
+}
+
+.navigation .nav-container .nav-inner .nav-links li + li {
+  font-family: 'Montserrat';
+  font-size: 24px;
+  color: white;
+  line-height: 24px * 1.36;
+  font-weight: 400;
+}
+
+.navigation .nav-container .nav-inner .nav-countries {
+  margin-top: 100px;
+}
+
+.navigation .nav-container .nav-inner .nav-countries li {
+  margin-bottom: 30px;
+}
+
+.navigation .nav-container .nav-inner .nav-countries li::after {
+  content: '•';
+  position: relative;
+  top: -10px;
+  font-size: 18px;
+  margin-left: 20px;
+  color: #656f78;
+}
+
+.navigation .nav-container .nav-inner .nav-countries li a {
+  font-family: 'Montserrat';
+  font-size: 48px;
+  color: white;
+  line-height: 48px * 1.36;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/*
+* ANIMATIONS
+*/
+@-webkit-keyframes slideLeft { from { -webkit-transform: translateX(-100%); } }
+@-moz-keyframes slideLeft { from { -moz-transform: translateX(-100%); } }
+@keyframes slideLeft { from { transform: translateX(-100%); } }
+
+.slideLeft {
+  display: block;
+  -webkit-animation: slideLeft 400ms cubic-bezier(0.91, 0.01, 0.6, 0.99) forwards;
+  -moz-animation: slideLeft 400ms cubic-bezier(0.91, 0.01, 0.6, 0.99) forwards;
+  animation: slideLeft 400ms cubic-bezier(0.91, 0.01, 0.6, 0.99) forwards;
+}
+
+@-webkit-keyframes slideRight { to { -webkit-transform: translateX(-100%); } }
+@-moz-keyframes slideRight { to { -moz-transform: translateX(-100%); } }
+@keyframes slideRight { to { transform: translateX(-100%); } }
+
+.slideRight {
+  -webkit-animation: slideRight 400ms cubic-bezier(0.91, 0.01, 0.6, 0.99) forwards;
+  -moz-animation: slideRight 400ms cubic-bezier(0.91, 0.01, 0.6, 0.99) forwards;
+  animation: slideRight 400ms cubic-bezier(0.91, 0.01, 0.6, 0.99) forwards;
+}
+
+/*
+* HEADER
+*/
+.header {
+  padding-top: 180px;
+  padding-bottom: 160px;
+  text-align: center;
+}
+
+.header .menu {
+  margin-top: 40px;
+}
+
+.header .menu li {
+  position: relative;
+  display: inline-block;
+  margin-left: 6px;
+  margin-right: 6px;
+  cursor: pointer;
+}
+
+.header .menu li.countries {
+  margin-right: 34px;
+}
+
+.header .menu li.countries::after {
+  content: '•';
+  position: absolute;
+  top: 2px;
+  font-size: 12px;
+  margin-left: 20px;
+  color: #656f78;
+}
+
+.header .menu li.countries,
+.header .menu li a {
+  font-size: 16px;
+  color: #ccc;
+  text-decoration: none;
+  transition: color 400ms ease;
+}
+
+.header .menu li::before {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ccc;
+  transition: width 400ms ease;
+}
+
+.header .menu li:hover,
+.header .menu li:hover a {
+  color: #58aee1;
+}
+
+.header .menu li:hover::before {
+  width: 100%;
+  background-color: #58aee1;
+}
+
+/*
+* PHOTOS POST
+*/
+.content .list {
+  margin: 0 auto;
+}
+
+.content .list .post a {
+  display: block;
+}
+
+.content .list .post {
+  position: relative;
+  max-width: 400px;
+  margin: 0 30px 60px;
+  cursor: pointer;
+  outline: 0;
+  -webkit-transform: translateY(60px);
+  -moz-transform: translateY(60px);
+  transform: translateY(60px);
+  transition: 400ms all ease;
+  opacity: 0;
+}
+
+.content .list .post:hover .details {
+  opacity: 1;
+}
+
+.content .list .post .details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(82, 158, 204, .75);
+  opacity: 0;
+  transition: 400ms opacity ease;
+}
+
+/*
+* BUTTONS
+*/
+.content .list .post .details .buttons {
+  position: relative;
+  display: inline-block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.content .list .post .details .buttons li {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 20px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.content .list .post .details .buttons li:last-of-type {
+  margin-right: 0;
+}
+
+.content .list .post .details .buttons .like-group .like_button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 10;
+}
+
+.content .list .post .details .buttons .like-group .like_button iframe {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.content .list .post .details .buttons .like-group .like_button:hover + .custom-like svg path,
+.content .list .post .details .buttons .reblog-group:hover svg path {
+  fill: #58aee1;
+}
+
+.content .list .post .details .buttons .like-group .like_button.liked + .custom-like svg path {
+  fill: #d74545;
+}
+
+.content .list .post .details .buttons .like-group .custom-like {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.content .list .post .details .buttons .like-group .custom-like svg path,
+.content .list .post .details .buttons .reblog-group svg path {
+  transition: fill 400ms ease;
+}
+
+/*
+* LOADER
+*/
+.loader {
+  text-align: center;
+  margin-top: 70px;
+  margin-bottom: 100px;
+}
+
+.loader .posts-end {
+  font-size: 16px;
+  color: #ccc;
+}
+
+/*
+* PAGINATION
+*/
+.pagination {
+  display: none !important;
+  text-align: center;
+}
+
+.pagination li a {
+  font-size: 12px;
+  margin-left: 6px;
+  margin-right: 6px;
+  color: #ccc;
+  text-decoration: none;
+  transition: color 400ms ease;
+}
